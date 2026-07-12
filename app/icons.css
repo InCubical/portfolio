@@ -1,0 +1,66 @@
+/* Icon webfonts from the original Canvas theme.
+   Kept as-is because proprietary glyph shapes cannot be reproduced with Tailwind.
+   Font files live in /public/fonts and are served from /fonts. */
+
+@font-face {
+  font-family: "font-icons";
+  src: url("/fonts/font-icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "lined-icons";
+  src: url("/fonts/lined-icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Simple-Line-Icons";
+  src: url("/fonts/Simple-Line-Icons.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  display: inline-block;
+  font-family: "font-icons";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-line-"],
+[class*=" icon-line-"] {
+  font-family: "lined-icons";
+}
+
+[class^="icon-line2-"],
+[class*=" icon-line2-"] {
+  font-family: "Simple-Line-Icons";
+}
+
+/* Glyphs actually used across the site */
+.icon-line-arrow-right:before { content: "\e912"; }
+.icon-line-link:before { content: "\e98a"; }
+.icon-line-minus:before { content: "\e99f"; }
+.icon-line-plus:before { content: "\e9bc"; }
+.icon-line2-arrow-down:before { content: "\e07b"; }
+.icon-double-angle-up:before { content: "\e7a2"; }
+.icon-angle-left:before { content: "\e7a4"; }
+.icon-angle-right:before { content: "\e7a5"; }
+.icon-angle-up:before { content: "\e7a6"; }
+.icon-facebook:before { content: "\e86f"; }
+.icon-instagram:before { content: "\ed71"; }
+.icon-behance:before { content: "\ecdf"; }
+.icon-pinterest:before { content: "\edc2"; }
