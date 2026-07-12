@@ -175,7 +175,7 @@ export default function ResumePage() {
               Visit portfolio
             </span>
             <a
-              href="https://portfolio-shaheed.web.app"
+              href="https://portfolio-six-green-y4rbvunose.vercel.app"
               style={{
                 fontFamily: "var(--font-display)",
                 fontSize: "var(--text-small)",
@@ -185,7 +185,7 @@ export default function ResumePage() {
                 paddingBottom: "1px",
               }}
             >
-              portfolio-shaheed.web.app
+              portfolio-six-green-y4rbvunose.vercel.app
             </a>
           </div>
         </div>
