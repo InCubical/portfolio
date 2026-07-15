@@ -4,7 +4,7 @@ export const metadata: Metadata = { title: "Resume · Shaheed Khan" };
 
 const CONTACT = [
   "+91 63617 56685",
-  "pathans3397@hotmail.com",
+  "incubical@hotmail.com",
   "linkedin.com/in/pathan97",
   "Mysore, Karnataka, India",
 ];
