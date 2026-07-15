@@ -581,7 +581,9 @@ form label {
     padding: 0 !important;
     max-width: 100% !important;
   }
-  .resume-section {
+  /* Let sections flow across pages (so page 1 fills up), but keep each
+     individual entry from splitting awkwardly across a page break. */
+  .resume-entry {
     break-inside: avoid;
   }
 }

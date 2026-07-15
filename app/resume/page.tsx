@@ -85,6 +85,12 @@ const TOOLS = [
 ];
 
 const labelStyle: React.CSSProperties = {
+  display: "block",
+  fontFamily: "var(--font-display)",
+  fontSize: "var(--text-small)",
+  letterSpacing: "var(--tracking-wide)",
+  textTransform: "uppercase",
+  color: "var(--accent)",
   borderTop: "1px solid var(--border)",
   paddingTop: "1.25rem",
   marginBottom: "1.5rem",
@@ -241,6 +247,7 @@ export default function ResumePage() {
           {EXPERIENCE.map((e, i) => (
             <div
               key={e.company + e.role}
+              className="resume-entry"
               style={
                 i > 0
                   ? { borderTop: "1px solid var(--border)", paddingTop: "clamp(2rem, 4vw, 3rem)" }
