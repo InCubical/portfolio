@@ -4,9 +4,15 @@ import LineReveal from "../LineReveal";
 export default function ProjectHero({
   title,
   image,
+  background,
+  tone = "light",
 }: {
   title: string;
   image: string;
+  /** CSS background shorthand, used instead of `image` when supplied. */
+  background?: string;
+  /** `dark` flips the title to light type for dark-ground heroes. */
+  tone?: "light" | "dark";
 }) {
   return (
     <section
@@ -15,13 +21,19 @@ export default function ProjectHero({
     >
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{ backgroundImage: `url('${image}')` }}
+        style={background ? { background } : { backgroundImage: `url('${image}')` }}
       />
-      <div className="absolute inset-0 bg-black/10" />
+      {!background && <div className="absolute inset-0 bg-black/10" />}
 
       <Container className="relative z-10">
         <div className="text-center">
-          <h2 className="hero-display" style={{ fontSize: "clamp(48px, 8vw, 100px)" }}>
+          <h2
+            className="hero-display"
+            style={{
+              fontSize: "clamp(48px, 8vw, 100px)",
+              ...(tone === "dark" ? { color: "#f0fafa" } : null),
+            }}
+          >
             <LineReveal animateOnLoad lines={[title]} />
           </h2>
         </div>

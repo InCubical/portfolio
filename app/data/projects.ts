@@ -10,128 +10,121 @@ export type Project = {
   title: string;
   thumb: string;
   hero: string;
+  /** CSS background shorthand, used instead of `hero` when supplied. */
+  heroBackground?: string;
+  /** `dark` flips the hero title to light type. */
+  heroTone?: "light" | "dark";
   featured: boolean;
   blocks: ProjectBlock[];
-  gallery: string[];
+  gallery?: string[];
+  /** Renders a bespoke showcase section in place of the image gallery. */
+  showcase?: "innobot";
 };
 
 const R = "/images/projects";
 
 export const projects: Project[] = [
   {
-    slug: "elegant-spaces",
-    title: "Elegant Spaces",
-    thumb: `${R}/elegant-spaces/Brading_and_dipaly.jpg`,
-    hero: `${R}/elegant-spaces/Catalogue.jpg`,
+    slug: "innobot-health",
+    title: "Innobot Health",
+    thumb: `${R}/innobot-health/thumb.svg`,
+    hero: `${R}/innobot-health/thumb.svg`,
+    heroBackground:
+      "radial-gradient(60% 55% at 20% 15%, rgba(47,211,200,0.22), transparent 70%), radial-gradient(55% 50% at 85% 80%, rgba(47,211,200,0.14), transparent 72%), #050708",
+    heroTone: "dark",
     featured: true,
+    showcase: "innobot",
     blocks: [
       {
         full: true,
-        body: "Elegant Spaces, a service-based company specializing in construction and architectural design, needed stronger online visibility and a wider reach in its local market. Here's a breakdown of the services delivered and the research behind them:",
+        body: "Innobot Health sells revenue cycle automation into US hospitals and physician groups. I own how the company acquires customers, and the brand surface all of it travels on.",
       },
       {
-        heading: "SEO (Search Engine Optimization)",
+        heading: "Read the business first",
         level: 2,
-        body: "A comprehensive SEO strategy lifted Elegant Spaces' online presence, helping them appear prominently in search results for their services.",
+        body: "This is a long, high trust sale into hospital finance and physician group leadership. Nobody signs from an ad, and no single channel closes anything on its own. So the job was never to buy traffic. It was to build a path a sceptical committee could walk down over months without losing the thread, and to know at every step which part of that path was working.",
       },
       {
-        heading: "Social Media Marketing",
+        heading: "Signal based outbound",
         level: 2,
-        body: "Targeted campaigns across social platforms engaged the audience and built a strong online community.",
+        body: "Outreach at scale, aimed only at the accounts and the titles worth having. Segmented by what the buyer actually owns rather than by whatever the list happened to come sorted by, so the first line of every sequence is about their problem instead of my product.",
       },
       {
-        heading: "Google Ads",
+        heading: "Performance media",
         level: 2,
-        body: "Carefully managed Google Ads campaigns, spanning search and display, increased visibility, drove website traffic, and generated leads.",
+        body: "Paid programmes pointed at conversion surfaces built for them, never at a homepage. Each campaign has a landing experience that continues the sentence the ad started, and the measurement behind it exists to tell me which part of the funnel is lying to me.",
       },
       {
-        heading: "Market Research",
+        heading: "An organic programme that compounds",
         level: 2,
-        body: "Research into comparable local companies surfaced best practices, market trends, and opportunities for Elegant Spaces.",
+        body: "The search foundation, the structured data and a content programme built so the work done this quarter is still earning next year. Service pages for every automated workflow the product covers, each one written for a specific buyer with a specific problem, not for a keyword.",
       },
       {
-        heading: "Print Media",
+        heading: "The conversion architecture",
         level: 2,
-        body: "Print materials, from posters and banners to business cards, flyers and brochures, kept a consistent, professional brand image across every offline touchpoint.",
+        body: "Eight automated service pages, three pages written for hospitals, provider groups and billing companies respectively, the platform page, and the trust and security material a healthcare buyer asks for before procurement will talk to you. Every one of them is a place a campaign can legitimately land.",
       },
       {
-        heading: "Business Listings",
+        heading: "The brand surface",
         level: 2,
-        body: "Listings on preferred platforms and directories strengthened local visibility and reputation.",
+        body: "The site, the landing experiences, the creative, the social and the video. Building the demand and building the thing it points at in the same pair of hands means the two never drift, and a test ships the same week I think of it.",
       },
       {
         full: true,
-        body: "The goal throughout was to position Elegant Spaces as a leading provider in the construction and architectural design industry. A blend of digital marketing, SEO and market research worked to boost their online presence and drive growth in the local market.",
+        body: "The part I am proudest of is below. The website runs on a design system I built before I built the site, which is the only reason one person can keep twenty eight routes coherent and ship a ninth service page in an afternoon.",
       },
       {
         full: true,
-        body: "Together, these efforts showcased Elegant Spaces' expertise, professionalism, and commitment to delivering exceptional service to their clients.",
+        body: "One person, whole funnel, first touch to booked meeting.",
       },
-    ],
-    gallery: [
-      `${R}/elegant-spaces/Banner_1.jpg`,
-      `${R}/elegant-spaces/Bill.jpg`,
-      `${R}/elegant-spaces/Brading_and_dipaly.jpg`,
-      `${R}/elegant-spaces/Business_Card_1.jpg`,
-      `${R}/elegant-spaces/Catalogue.jpg`,
-      `${R}/elegant-spaces/Logo.jpg`,
-      `${R}/elegant-spaces/Quotation.jpg`,
     ],
   },
   {
-    slug: "geena-apparel",
-    title: "Geena Apparel",
-    thumb: `${R}/geena-apparel/packing_box.jpg`,
-    hero: `${R}/geena-apparel/packing_box.jpg`,
+    slug: "msa",
+    title: "MSA",
+    thumb: `${R}/msa/Logo.jpg`,
+    hero: `${R}/msa/Branding.jpg`,
     featured: true,
     blocks: [
       {
         full: true,
-        body: "Geena Apparel, an e-commerce brand specializing in Indian-style wedding apparel, sits in a rich cultural niche full of distinct challenges and opportunities. The focus was to amplify its online presence while celebrating its cultural identity. Here's an overview of the services delivered:",
+        body: "M & S Associates works across real estate, construction and architectural design. I owned brand and revenue, which in a market this crowded meant fixing the story before touching the spend.",
       },
       {
-        heading: "Social Media Marketing",
+        heading: "Positioning first",
         level: 2,
-        body: "The cultural niche called for a tailored approach. Campaigns across social platforms celebrated Indian traditions and showcased the exquisite wedding apparel, engaging the audience and building a strong online community.",
+        body: "Every competitor in this market says the same three things about trust, quality and experience. None of it separates anyone. I repositioned how the company presented itself so that a buyer could tell within a sentence what M & S actually did differently, then rebuilt the brand surface around that answer.",
       },
       {
-        heading: "Google Ads",
+        heading: "The web layer, shipped myself",
         level: 2,
-        body: "To expand reach and promote the culturally rich wedding apparel, carefully managed Google Ads campaigns used diverse formats and strategies, aligned with the brand's identity to captivate the right audience and drive online sales.",
+        body: "I built and deployed the website in React and Firebase rather than waiting on a queue. Owning the code meant a property, a campaign or a new service could go live the day it was decided, and the site could be shaped around how buyers actually moved through it rather than around a template.",
       },
       {
-        heading: "Local SEO (Search Engine Optimization)",
+        heading: "Demand across two businesses",
         level: 2,
-        body: "Comprehensive local SEO fine-tuned content, listings and visibility to strengthen Geena Apparel's presence within its niche and attract nearby customers who valued its heritage.",
+        body: "Real estate and construction are different buyers with different timelines, so they got different programmes: organic search and performance media for the property listings, and a slower, credibility led motion for the design and build side.",
       },
       {
-        heading: "E-commerce Optimization",
+        heading: "Pipeline the sales team could work",
         level: 2,
-        body: "The e-commerce experience was refined for a seamless shopping journey that let the wedding apparel shine.",
-      },
-      {
-        heading: "Email Marketing",
-        level: 2,
-        body: "Email marketing kept buyers engaged with new collections, special offers, and cultural insights.",
-      },
-      {
-        heading: "Company Listings on Preferred Platforms",
-        level: 2,
-        body: "Listings on preferred platforms and directories improved local visibility and reputation, feeding a streamlined conversion funnel.",
+        body: "The point was never traffic. It was qualified enquiries landing with enough context attached that the sales team knew which property, which budget and which stage before they picked up the phone.",
       },
       {
         full: true,
-        body: "Geena Apparel, as an e-commerce brand, was not just about selling clothing; it was about preserving and promoting cultural traditions through style and fashion. The project celebrated the brand's cultural richness, addressed its challenges, and set out to boost engagement, online sales, and the broader recognition of its one-of-a-kind collection within the digital retail landscape.",
+        body: "The edge came from sharper research, tighter targeting and creative that did not look like everyone else's. In a market where everyone buys the same keywords, that is the whole game.",
       },
     ],
     gallery: [
-      `${R}/geena-apparel/card_1.jpg`,
-      `${R}/geena-apparel/packing_box_2.jpg`,
-      `${R}/geena-apparel/Letter_Head.jpg`,
-      `${R}/geena-apparel/Logo.jpg`,
-      `${R}/geena-apparel/packing_box.jpg`,
-      `${R}/geena-apparel/Website.jpg`,
-      `${R}/geena-apparel/Catalogue.png`,
+      `${R}/msa/Branding.jpg`,
+      `${R}/msa/card_1.jpg`,
+      `${R}/msa/Website-01.jpg`,
+      `${R}/msa/Instagram_1.jpg`,
+      `${R}/msa/Instagram_2.jpg`,
+      `${R}/msa/Instagram_3.jpg`,
+      `${R}/msa/Letter_Head_1.jpg`,
+      `${R}/msa/Letter_Head_2.jpg`,
+      `${R}/msa/Logo.jpg`,
     ],
   },
   {
@@ -143,41 +136,31 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "Malnad Herbals is a product-based company creating beauty products for skin and hair, with a strong emphasis on natural, ethical values: vegan, GMO-free, cruelty-free and paraben-free. The work spanned a comprehensive range of tasks, a holistic approach to brand development and marketing.",
+        body: "Malnad Herbals makes natural skin and hair products: vegan, cruelty free, no parabens, no GMO. I built the brand end to end, from the packaging on the shelf to the programmes that sold it.",
       },
       {
-        heading: "Product Design",
+        heading: "A brand that had to survive being picked up",
         level: 2,
-        body: "Visually appealing, user-friendly product designs resonated with the brand's natural and ethical values.",
+        body: "Consumer beauty is judged in about two seconds, in hand, next to a competitor. The identity and the product design had to carry the ethical position on sight, without a paragraph explaining it, and then hold up equally in a feed at thumbnail size.",
       },
       {
-        heading: "Branding Design",
+        heading: "Built for the shelf and the scroll",
         level: 2,
-        body: "A brand identity reflected Malnad Herbals' commitment to herbal, cruelty-free products, with consistency and recognition across the market.",
+        body: "Packaging, promotional creative and social content made as one system rather than as separate jobs, so the product a customer saw in an ad was recognisably the product that arrived in the box.",
       },
       {
-        heading: "Marketing Collateral",
+        heading: "Everywhere the buyer already was",
         level: 2,
-        body: "Banners, posters, flyers and brochures communicated the brand's unique selling points to potential customers.",
+        body: "The brand ran on its own site and across the marketplaces customers actually shop on, with the listings, the imagery and the copy treated as a conversion surface in their own right rather than as an afterthought.",
       },
       {
-        heading: "E-commerce Listing",
+        heading: "Performance media with nowhere to hide",
         level: 2,
-        body: "Products were listed across e-commerce platforms, from the official website to Amazon, Flipkart, Meesho and Myntra, for wider reach and accessibility.",
-      },
-      {
-        heading: "Social Media Marketing",
-        level: 2,
-        body: "Social media strategies grew and engaged the brand's online community through content creation, management and audience interaction.",
-      },
-      {
-        heading: "Google Ads",
-        level: 2,
-        body: "Carefully managed Google Ads, spanning search, display, YouTube and pre-roll, captured attention, drove traffic and boosted online sales.",
+        body: "Search, display and video programmes pointed at a funnel built to turn attention into a second purchase, not just a first one. Consumer is unforgiving that way. A brand that only ever wins the first order does not survive its own ad budget.",
       },
       {
         full: true,
-        body: "The work was underpinned by a commitment to align Malnad Herbals' brand and products with its core values of natural, ethical, responsible beauty. Research, combined with the client's insights, shaped a cohesive, compelling brand presence in a competitive market.",
+        body: "Consumer taught me unit economics the hard way. Every rupee of spend had to come back, and the dashboard said so within the week. I have run every channel since with that clock in my head.",
       },
     ],
     gallery: [
@@ -200,78 +183,100 @@ export const projects: Project[] = [
     ],
   },
   {
-    slug: "msa",
-    title: "MSA",
-    thumb: `${R}/msa/Logo.jpg`,
-    hero: `${R}/msa/Branding.jpg`,
+    slug: "elegant-spaces",
+    title: "Elegant Spaces",
+    thumb: `${R}/elegant-spaces/Brading_and_dipaly.jpg`,
+    hero: `${R}/elegant-spaces/Catalogue.jpg`,
     featured: true,
     blocks: [
       {
         full: true,
-        body: "M & S Associates is a dynamic company spanning real estate, construction and architectural design. The project covered a diverse array of services across all three, focused on funneling conversions through effective digital marketing.",
+        body: "Elegant Spaces builds and designs. Good work, almost no visibility, and a local market where the competitor with the better shopfront wins the enquiry regardless of who builds better.",
       },
       {
-        full: true,
-        heading: "Real Estate Sales",
+        heading: "The diagnosis",
         level: 2,
-        body: "M & S Associates handled an extensive range of properties, from flats, plots and houses to commercial, residential, industrial and agricultural land. The approach was tailored to connect with the right customers through the tactics below:",
+        body: "The problem was not demand. People were already searching for exactly what this company did. The problem was that when they searched, Elegant Spaces was not there, and when they arrived by any other route there was nothing that made the quality of the work obvious. So the work started with being findable and being credible, in that order.",
       },
       {
-        heading: "SEO (Search Engine Optimization)",
-        level: 3,
-        body: "A comprehensive SEO strategy put M & S Associates' listings prominently in search results, drawing the attention of potential investors.",
-      },
-      {
-        heading: "Social Media Marketing",
-        level: 3,
-        body: "Campaigns across social platforms showcased available properties and engaged potential buyers.",
-      },
-      {
-        heading: "Google Ads",
-        level: 3,
-        body: "Carefully managed Google Ads, spanning search, display and pre-roll, were designed to capture the attention of prospective real estate investors.",
-      },
-      {
-        heading: "Email Marketing",
-        level: 3,
-        body: "Email campaigns kept potential buyers informed about new property listings and investment opportunities.",
-      },
-      {
-        heading: "Company Listings on Preferred Platforms",
-        level: 3,
-        body: "Listings on preferred platforms and directories strengthened local visibility, reputation and the conversion funnel.",
-      },
-      {
-        full: true,
-        heading: "Construction and Architectural Design",
+        heading: "Organic search as the foundation",
         level: 2,
-        body: "M & S Associates also offered comprehensive construction and architectural design services, promoted through digital marketing channels built to drive conversions.",
+        body: "A search programme built around the services people actually type, not the ones the industry likes to call them. Construction and architectural design get searched for in plain language, and matching that language was most of the win.",
       },
       {
-        heading: "Social Media Marketing",
-        level: 3,
-        body: "Social media campaigns accentuated the company's expertise in construction and architectural design, engaging potential clients.",
+        heading: "Performance media on top",
+        level: 2,
+        body: "Paid programmes across search and display to cover the ground the organic work had not reached yet, and to hold position on the terms that mattered most while the slower work compounded underneath.",
       },
       {
-        heading: "Google Ads",
-        level: 3,
-        body: "Google Ads for the construction and design services, across search, display and other formats, reached the right audience and fed the conversion funnel.",
+        heading: "The brand surface, on and offline",
+        level: 2,
+        body: "A design and build firm gets judged on physical things. The catalogue, the banners, the cards and the site had to say the same thing in the same voice, because a prospect often meets two of them before they ever meet a person.",
+      },
+      {
+        heading: "Owning the local map",
+        level: 2,
+        body: "Listings and directory presence tightened up so that a local search resolved to this company, with consistent detail everywhere it appeared.",
       },
       {
         full: true,
-        body: "The core objective was to market M & S Associates' real estate, construction and architectural design services to a broader audience. Stronger online presence through SEO, targeted marketing and platform listings worked to boost conversions and drive growth across these sectors.",
+        body: "Took a company that did strong work nobody could find, and made it the one that turns up and looks the part when someone local goes looking.",
       },
     ],
     gallery: [
-      `${R}/msa/Branding.jpg`,
-      `${R}/msa/card_1.jpg`,
-      `${R}/msa/Website-01.jpg`,
-      `${R}/msa/Instagram_1.jpg`,
-      `${R}/msa/Instagram_2.jpg`,
-      `${R}/msa/Instagram_3.jpg`,
-      `${R}/msa/Letter_Head_1.jpg`,
-      `${R}/msa/Letter_Head_2.jpg`,
-      `${R}/msa/Logo.jpg`,
+      `${R}/elegant-spaces/Banner_1.jpg`,
+      `${R}/elegant-spaces/Bill.jpg`,
+      `${R}/elegant-spaces/Brading_and_dipaly.jpg`,
+      `${R}/elegant-spaces/Business_Card_1.jpg`,
+      `${R}/elegant-spaces/Catalogue.jpg`,
+      `${R}/elegant-spaces/Logo.jpg`,
+      `${R}/elegant-spaces/Quotation.jpg`,
+    ],
+  },
+  {
+    slug: "geena-apparel",
+    title: "Geena Apparel",
+    thumb: `${R}/geena-apparel/packing_box.jpg`,
+    hero: `${R}/geena-apparel/packing_box.jpg`,
+    featured: true,
+    blocks: [
+      {
+        full: true,
+        body: "Geena Apparel sells Indian wedding apparel online. A rich, specific niche, and one where the usual e-commerce playbook flattens exactly the thing people are buying.",
+      },
+      {
+        heading: "The niche was the strategy",
+        level: 2,
+        body: "Wedding apparel is not bought the way ordinary clothing is bought. It is emotional, occasion led, researched for weeks and tied to tradition. Treating it as generic fashion retail would have cost the brand the only advantage it had, so everything got built around the cultural specificity rather than in spite of it.",
+      },
+      {
+        heading: "Content that respected the occasion",
+        level: 2,
+        body: "Social programmes built around the traditions the clothing belongs to, showing the pieces in the context people imagine wearing them in. That is what earns a following in a niche this personal.",
+      },
+      {
+        heading: "The storefront as conversion surface",
+        level: 2,
+        body: "The shopping experience reworked so the apparel carried the page: better merchandising, a cleaner path from browsing to checkout, and product presentation that did justice to garments people were about to spend significantly on.",
+      },
+      {
+        heading: "Demand and lifecycle",
+        level: 2,
+        body: "Performance media to reach buyers actively looking, a search foundation tuned to how this customer actually phrases things, and lifecycle email keeping buyers close to new collections between the long gaps that a wedding purchase naturally leaves.",
+      },
+      {
+        full: true,
+        body: "The brand was never only selling clothing. It was selling participation in something, and the growth work only started performing once it was built to say so.",
+      },
+    ],
+    gallery: [
+      `${R}/geena-apparel/card_1.jpg`,
+      `${R}/geena-apparel/packing_box_2.jpg`,
+      `${R}/geena-apparel/Letter_Head.jpg`,
+      `${R}/geena-apparel/Logo.jpg`,
+      `${R}/geena-apparel/packing_box.jpg`,
+      `${R}/geena-apparel/Website.jpg`,
+      `${R}/geena-apparel/Catalogue.png`,
     ],
   },
   {
@@ -283,41 +288,36 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "Nexus Servicing offers door-to-door servicing for electronic appliances alongside plumbing and electrical work. Its priority was lead generation and conversion in the local market. The strategy centered on SEO and search ads, plus Google AMP pages for faster loading and stronger rankings.",
+        body: "Nexus Servicing repairs appliances and handles plumbing and electrical work, door to door. The entire business depends on being the one that gets called when something breaks.",
       },
       {
-        heading: "SEO (Search Engine Optimization)",
+        heading: "Intent is everything here",
         level: 2,
-        body: "A comprehensive SEO strategy lifted Nexus Servicing's visibility and attracted local customers seeking electronic and plumbing/electrical services, with the website and content optimized to capture leads.",
+        body: "Nobody researches appliance repair for a fortnight. A machine breaks, someone searches, and they call one of the first credible options. There is no brand loyalty to build on and no consideration phase to nurture. So the whole programme was pointed at being present and convincing in the ninety seconds that decision takes.",
       },
       {
-        heading: "Search Engine Ads",
+        heading: "Search, built for urgency",
         level: 2,
-        body: "With lead generation front and center, carefully managed search ads, especially on Google, were pivotal. Targeted ads engaged customers actively seeking these services locally.",
+        body: "An organic foundation covering every appliance and trade the business services, matched to how people describe a problem rather than how a technician would. Someone types what broke, not what the repair is called.",
       },
       {
-        heading: "Google AMP Pages",
+        heading: "Paid coverage on the moments that convert",
         level: 2,
-        body: "Google AMP (Accelerated Mobile Pages) delivered faster-loading landing pages and better rankings, improving user experience, visibility and lead generation.",
+        body: "Performance media concentrated on the highest intent searches in the service area, because in this category the click that arrives during a problem is worth many times the one that arrives during a browse.",
       },
       {
-        heading: "Branding and Local Targeting",
+        heading: "Speed as a conversion feature",
         level: 2,
-        body: "While SEO and search ads drove lead generation, other channels handled branding and local targeting, with social media and display ads built to raise awareness and recognition among local customers.",
+        body: "The landing experiences were built to load fast on a phone on mobile data, which is the actual condition someone is in when their washing machine has just flooded the kitchen. Slow pages do not lose you a ranking here so much as they lose you the call.",
       },
       {
-        heading: "Service Portfolio",
+        heading: "Awareness underneath it",
         level: 2,
-        body: "Nexus Servicing covered a comprehensive range, from air conditioning, microwaves, refrigerators, washing machines, TVs and chimneys to plumbing and electrical work. The marketing was tailored to showcase these services to local customers in need.",
-      },
-      {
-        heading: "Google Ads",
-        level: 2,
-        body: "Carefully managed Google Ads, spanning search, display, YouTube and pre-roll, captured attention, drove traffic and boosted sales.",
+        body: "Social and display carried recognition in the service area so the name was already familiar by the time it appeared in a list of search results.",
       },
       {
         full: true,
-        body: "The core objective was to position Nexus Servicing as the preferred provider for electronic and plumbing/electrical services locally. SEO, search ad campaigns and Google AMP together worked to optimize lead generation and conversions.",
+        body: "Positioned a local services business to be the default call in its area, with a funnel that took someone from a broken appliance to a booked visit without a single step in between that asked them to wait.",
       },
     ],
     gallery: [

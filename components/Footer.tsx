@@ -117,8 +117,8 @@ export default function Footer() {
               margin: 0,
             }}
           >
-            Shaheed Khan, a growth partner for ambitious brands. Marketing,
-            design and data, built into systems that compound. Founder of
+            I build the acquisition engine, then I run it. Six years across
+            healthcare, global expansion, real estate and consumer. Founder of
             Pixeldrive.
           </p>
           <a

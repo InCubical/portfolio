@@ -1,0 +1,406 @@
+/* ==================================================================
+   Innobot Health design-system showcase.
+
+   A specimen panel, not a theme. Everything is scoped under `.ib-sys`
+   so Innobot's dark palette never leaks into the portfolio's light one.
+   Token values are transcribed from the system's own source of truth,
+   `innobot-health-official-website/src/app/globals.css`.
+================================================================== */
+
+.ib-sys {
+  /* Structure */
+  --ib-bg: #050708;
+  --ib-bg2: #000000;
+  --ib-surface: #0d1115;
+  --ib-surface2: #12181c;
+  --ib-border: #1a2429;
+  --ib-border-h: #2a3a42;
+
+  /* Text ramp */
+  --ib-t1: #f0fafa;
+  --ib-t2: #9ab5b8;
+  --ib-t3: #6a8a8d;
+  --ib-t4: #354548;
+
+  /* State. Never decorative. */
+  --ib-green: #2fd3c8;
+  --ib-amber: #f59e0b;
+  --ib-red: #e85d69;
+
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  background: var(--ib-bg);
+  color: var(--ib-t2);
+  padding: clamp(64px, 11vh, 128px) var(--gutter);
+  font-family: var(--ib-syne), system-ui, sans-serif;
+}
+
+/* The ambient teal mist the real site renders in WebGL. Static here:
+   a portfolio page should not pay for a shader to show a colour. */
+.ib-sys::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(60% 45% at 18% 8%, rgba(47, 211, 200, 0.14), transparent 70%),
+    radial-gradient(50% 40% at 88% 32%, rgba(47, 211, 200, 0.09), transparent 72%),
+    radial-gradient(70% 50% at 50% 104%, rgba(47, 211, 200, 0.07), transparent 70%);
+  pointer-events: none;
+}
+
+.ib-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+/* ── Section scaffolding ─────────────────────────────────────── */
+
+.ib-block + .ib-block {
+  margin-top: clamp(56px, 9vh, 104px);
+  padding-top: clamp(40px, 6vh, 72px);
+  border-top: 1px solid var(--ib-border);
+}
+
+.ib-label {
+  display: block;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ib-green);
+  margin-bottom: 1.25rem;
+}
+
+.ib-h {
+  font-family: var(--ib-fraunces), Georgia, serif;
+  font-size: clamp(30px, 4vw, 54px);
+  font-weight: 300;
+  line-height: 1.08;
+  letter-spacing: -0.02em;
+  color: var(--ib-t1);
+  margin: 0 0 1.25rem;
+  max-width: 20ch;
+}
+
+.ib-h em {
+  font-style: italic;
+  color: var(--ib-green);
+}
+
+.ib-body {
+  font-size: clamp(16px, 1.3vw, 18px);
+  line-height: 1.8;
+  color: var(--ib-t2);
+  max-width: 66ch;
+  margin: 0;
+}
+
+.ib-body + .ib-body {
+  margin-top: 1rem;
+}
+
+/* ── 01 Palette ──────────────────────────────────────────────── */
+
+.ib-swatches {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+  gap: 1px;
+  background: var(--ib-border);
+  border: 1px solid var(--ib-border);
+  margin-top: clamp(28px, 4vh, 44px);
+}
+
+.ib-swatch {
+  background: var(--ib-surface);
+  padding: 1.25rem;
+}
+
+.ib-chip {
+  height: 64px;
+  border: 1px solid var(--ib-border-h);
+  margin-bottom: 0.9rem;
+}
+
+.ib-hex {
+  display: block;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--ib-t1);
+  margin-bottom: 0.3rem;
+}
+
+.ib-use {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--ib-t3);
+}
+
+/* ── 02 Type ─────────────────────────────────────────────────── */
+
+.ib-specimens {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  background: var(--ib-border);
+  border: 1px solid var(--ib-border);
+  margin-top: clamp(28px, 4vh, 44px);
+}
+
+.ib-spec {
+  background: var(--ib-surface);
+  padding: clamp(20px, 3vw, 34px);
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.75rem;
+}
+
+@media (min-width: 720px) {
+  .ib-spec {
+    grid-template-columns: 150px minmax(0, 1fr);
+    align-items: baseline;
+    gap: 2rem;
+  }
+}
+
+.ib-spec-meta {
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ib-t4);
+  line-height: 1.7;
+}
+
+.ib-spec-fraunces {
+  font-family: var(--ib-fraunces), Georgia, serif;
+  font-weight: 300;
+  font-size: clamp(28px, 3.6vw, 46px);
+  line-height: 1.1;
+  color: var(--ib-t1);
+}
+
+.ib-spec-fraunces em {
+  font-style: italic;
+  color: var(--ib-green);
+}
+
+.ib-spec-syne {
+  font-family: var(--ib-syne), system-ui, sans-serif;
+  font-weight: 600;
+  font-size: clamp(20px, 2.4vw, 30px);
+  letter-spacing: -0.01em;
+  color: var(--ib-t1);
+}
+
+.ib-spec-mono {
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: clamp(13px, 1.3vw, 16px);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-variant-numeric: tabular-nums;
+  color: var(--ib-t1);
+}
+
+/* ── 03 Glass ────────────────────────────────────────────────── */
+
+.ib-glass-stage {
+  position: relative;
+  margin-top: clamp(28px, 4vh, 44px);
+  padding: clamp(24px, 4vw, 52px);
+  border: 1px solid var(--ib-border);
+  background:
+    radial-gradient(48% 70% at 22% 20%, rgba(47, 211, 200, 0.3), transparent 70%),
+    radial-gradient(44% 64% at 82% 76%, rgba(47, 211, 200, 0.18), transparent 72%),
+    linear-gradient(140deg, #071417 0%, #050708 58%, #0a1a1d 100%);
+}
+
+.ib-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: clamp(14px, 2vw, 22px);
+}
+
+/* The real mechanism. Webkit property FIRST and the standard one LAST:
+   LightningCSS dedupes the pair and keeps whichever is declared last,
+   so putting webkit last ships prefix-only CSS and the blur dies. */
+.ib-card {
+  padding: clamp(18px, 2.4vw, 26px);
+  background: rgba(13, 17, 21, 0.42);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: blur(16px) saturate(1.6);
+  backdrop-filter: blur(16px) saturate(1.6);
+}
+
+.ib-card-k {
+  display: block;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ib-t3);
+  margin-bottom: 0.7rem;
+}
+
+.ib-card-v {
+  display: block;
+  font-family: var(--ib-syne), system-ui, sans-serif;
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ib-t1);
+  margin-bottom: 0.55rem;
+}
+
+.ib-card-v.is-value { color: var(--ib-green); }
+.ib-card-v.is-human { color: var(--ib-amber); }
+.ib-card-v.is-blocked { color: var(--ib-red); }
+
+.ib-card-n {
+  display: block;
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--ib-t3);
+}
+
+.ib-caption {
+  margin: 1rem 0 0;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ib-t4);
+}
+
+/* ── 04 Scale ────────────────────────────────────────────────── */
+
+.ib-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1px;
+  background: var(--ib-border);
+  border: 1px solid var(--ib-border);
+  margin-top: clamp(28px, 4vh, 44px);
+}
+
+.ib-stat {
+  background: var(--ib-surface);
+  padding: clamp(18px, 2.6vw, 30px);
+}
+
+.ib-stat-n {
+  display: block;
+  font-family: var(--ib-syne), system-ui, sans-serif;
+  font-size: clamp(30px, 4vw, 46px);
+  font-weight: 700;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  color: var(--ib-green);
+  margin-bottom: 0.5rem;
+}
+
+.ib-stat-l {
+  display: block;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  color: var(--ib-t3);
+}
+
+/* ── 05 The rules ────────────────────────────────────────────── */
+
+.ib-rules {
+  list-style: none;
+  padding: 0;
+  margin: clamp(28px, 4vh, 44px) 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.ib-rule {
+  border-top: 1px solid var(--ib-border);
+  padding: clamp(16px, 2.2vw, 24px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.5rem;
+}
+
+@media (min-width: 720px) {
+  .ib-rule {
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 1.75rem;
+    align-items: start;
+  }
+}
+
+.ib-rule:last-child {
+  border-bottom: 1px solid var(--ib-border);
+}
+
+.ib-rule-n {
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  color: var(--ib-green);
+  padding-top: 0.35rem;
+}
+
+.ib-rule-t {
+  font-size: clamp(15px, 1.3vw, 17px);
+  line-height: 1.75;
+  color: var(--ib-t2);
+  margin: 0;
+}
+
+.ib-rule-t code {
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 0.88em;
+  color: var(--ib-t1);
+  background: var(--ib-surface2);
+  border: 1px solid var(--ib-border);
+  padding: 0.1em 0.4em;
+}
+
+/* ── Closer ──────────────────────────────────────────────────── */
+
+.ib-closer {
+  margin-top: clamp(48px, 8vh, 88px);
+  padding-top: clamp(32px, 5vh, 56px);
+  border-top: 1px solid var(--ib-border);
+  font-family: var(--ib-fraunces), Georgia, serif;
+  font-weight: 300;
+  font-style: italic;
+  font-size: clamp(22px, 2.8vw, 36px);
+  line-height: 1.3;
+  color: var(--ib-t1);
+  max-width: 26ch;
+}
+
+.ib-visit {
+  display: inline-block;
+  margin-top: clamp(24px, 4vh, 40px);
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ib-bg);
+  background: var(--ib-green);
+  text-decoration: none;
+  padding: 0.85rem 1.6rem;
+  transition: background 0.25s var(--ease-out-flow);
+}
+
+.ib-visit:hover {
+  background: #5ce3da;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ib-visit { transition: none; }
+}

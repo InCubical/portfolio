@@ -28,7 +28,7 @@ const GTM_ID = "GTM-M92VT3QP";
 export const metadata: Metadata = {
   title: "Shaheed Khan · Growth Partner",
   description:
-    "Shaheed Khan is a growth partner for ambitious brands, working alongside founders and leadership teams to turn marketing, design and data into systems that compound. Founder of Pixeldrive.",
+    "I build the acquisition engine, then I run it. Full funnel demand, the brand surface and the web layer for a US revenue cycle company and a global expansion firm. Founder of Pixeldrive.",
   icons: { icon: "/images/logo.png" },
   openGraph: {
     images: [

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProjectHero from "@/components/project/ProjectHero";
+import InnobotSystem from "@/components/project/InnobotSystem";
 import InteractiveBentoGallery from "@/components/InteractiveBentoGallery";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import ScrollWords from "@/components/ScrollWords";
@@ -46,7 +47,12 @@ export default async function WorkDetailPage({
 
   return (
     <>
-      <ProjectHero title={project.title} image={project.hero} />
+      <ProjectHero
+        title={project.title}
+        image={project.hero}
+        background={project.heroBackground}
+        tone={project.heroTone}
+      />
 
       {/* Written breakdown */}
       <section className="section-container">
@@ -156,21 +162,26 @@ export default async function WorkDetailPage({
         </div>
       </section>
 
+      {/* Bespoke showcase, for projects whose work is a system rather than a set of images */}
+      {project.showcase === "innobot" && <InnobotSystem />}
+
       {/* Gallery */}
-      <section style={{ borderTop: "1px solid var(--border)", paddingTop: "clamp(48px, 8vh, 80px)" }}>
-        <InteractiveBentoGallery
-          title="Selected designs"
-          description="A closer look at the work. Drag to rearrange, tap any piece to view it up close."
-          mediaItems={project.gallery.map((url, i) => ({
-            id: i + 1,
-            type: "image",
-            title: project.title,
-            desc: "Selected design",
-            url,
-            span: SPANS[i % SPANS.length],
-          }))}
-        />
-      </section>
+      {project.gallery && project.gallery.length > 0 && (
+        <section style={{ borderTop: "1px solid var(--border)", paddingTop: "clamp(48px, 8vh, 80px)" }}>
+          <InteractiveBentoGallery
+            title="Selected designs"
+            description="A closer look at the work. Drag to rearrange, tap any piece to view it up close."
+            mediaItems={project.gallery.map((url, i) => ({
+              id: i + 1,
+              type: "image",
+              title: project.title,
+              desc: "Selected design",
+              url,
+              span: SPANS[i % SPANS.length],
+            }))}
+          />
+        </section>
+      )}
 
       {/* Related */}
       <section className="section-container" style={{ borderTop: "1px solid var(--border)" }}>

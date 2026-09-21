@@ -10,46 +10,37 @@ const ROLES = [
     company: "Innobot Health",
     role: "Digital Content & Marketing Specialist",
     period: "May 2024 – Present",
-    place: "Remote · US Healthcare (RCM)",
-    body: "Innobot Health is reshaping healthcare automation in US revenue-cycle management. The work runs the full demand engine: automated LinkedIn outreach with Expandi, email at scale with Instantly, SEO that holds page one, and paid media, alongside everything that makes it land, from infographics and social content to brand, LinkedIn ads and the website itself.",
+    place: "Remote · US revenue cycle",
+    body: "I own how this company acquires customers. A long cycle, high trust sale into hospital finance and physician group leadership, where nobody signs from an ad and no single channel closes anything alone. I built and run the whole acquisition system: signal based outbound at scale, performance media, an organic search and content programme that compounds, and the conversion architecture holding it together. The brand surface it travels on is mine too, the site, the landing experiences, the creative, the social. One person, whole funnel, first touch to booked meeting.",
   },
   {
     company: "InSource Expansion Group",
     role: "Digital Content Marketing Specialist",
     period: "Jul 2024 – Present",
-    place: "Hybrid · Global expansion & hiring",
-    body: "A global expansion company that helps US firms hire across borders. Its presence was built from a blank slate: the website, the SEO foundation, the content and the brand, along with the campaigns behind it, from performance and keyword strategy to blogs, ads, social and LinkedIn outreach that converts.",
-  },
-  {
-    company: "InCubical",
-    role: "Founder",
-    period: "Apr 2018 – Present",
-    place: "Mysore, India",
-    body: "Where it began. InCubical started as local design work in Mysore and grew into a studio spanning design, then marketing, then web. It remains the foundation for the work today: taking a brand from idea to launch to growth.",
+    place: "Hybrid · Global expansion",
+    body: "Took a global expansion company from no brand and no pipeline to a working go to market. Positioning and identity first, then the website and search foundation, then the demand programmes that run on top: performance campaigns, keyword and content strategy, and an outbound motion aimed only at the accounts worth having. Built the story before the machine, because a machine selling a weak story just burns budget faster.",
   },
   {
     company: "M & S Associates",
     role: "Head of Marketing",
     period: "Sep 2022 – Feb 2024",
     place: "Mysore, India · Real estate",
-    body: "Real estate moves fast, and so did the approach. The brand and website were built from the ground up (React, deployed on Firebase), with ads and lead generation, research, sharp targeting and creative that made M&S stand out in a crowded market.",
+    body: "Owned brand and revenue for a real estate firm. Repositioned how the company presented itself, shipped the website myself in React and Firebase, and ran the acquisition programmes that fed the sales team. In a market where every competitor says the same three things, the edge came from sharper research, tighter targeting and creative that did not look like everyone else's.",
   },
   {
     company: "Malnad Herbals",
     role: "Product Marketing Specialist",
     period: "Jul 2020 – Aug 2022",
-    place: "Mysore, India · D2C beauty",
-    body: "A natural, cruelty-free beauty brand made to look as good as its products: packaging, promotional and social creative, a clean SEO-friendly site, and Google and Meta campaigns that turned attention into sales.",
+    place: "Mysore, India · Consumer beauty",
+    body: "Built a natural, cruelty free beauty brand end to end: the packaging on the shelf, the creative in the feed, the site it all pointed at, and the paid programmes that turned attention into repeat purchase. Consumer taught me unit economics the hard way. Every rupee of spend had to come back, and the dashboard said so within the week.",
   },
-];
-
-const CERTS = [
-  "Search Ads 360 Certification, Google (2023)",
-  "Google Analytics Certification, Google (2023)",
-  "Display & Video 360 Certification, Google (2023)",
-  "Campaign Manager 360 Certification, Google (2023)",
-  "Creative Certification, Google (2023)",
-  "Fundamentals of Digital Marketing, Google (2022)",
+  {
+    company: "InCubical",
+    role: "Founder",
+    period: "2018 – Present",
+    place: "Mysore, India · Mechanical design & CNC",
+    body: "Where I started. A mechanical design and CNC programming practice: part design, tooling, and the G code that actually cut the metal. It is the least marketing thing on this page and quietly the most useful. Designing for manufacture teaches you to model the whole system before you commit to it, to work out where it fails before you build it, and to respect a constraint you cannot argue your way around. I run growth the same way.",
+  },
 ];
 
 export default function ExperiencePage() {
@@ -69,16 +60,16 @@ export default function ExperiencePage() {
             marginBottom: "clamp(24px, 4vh, 40px)",
           }}
         >
-          A decade of turning ideas into{" "}
+          Where I&rsquo;ve owned the{" "}
           <em style={{ color: "var(--accent)", fontStyle: "italic", fontWeight: 400 }}>
-            growth.
+            number.
           </em>
         </h1>
         <ScrollWords className="editorial" style={{ maxWidth: "60ch" }}>
-          A path that started in design and moved into marketing and web,
-          connecting the two ever since. The work has spanned founders and
-          leadership teams across healthcare, global expansion, real estate and
-          D2C, with a studio built in between.
+          Six years across healthcare, global expansion, real estate and consumer.
+          Different categories, same job: work out where growth actually comes
+          from, assemble the stack around that answer, and own what it produces.
+          Alongside it I run Pixeldrive, my own design, marketing and web studio.
         </ScrollWords>
       </section>
 
@@ -136,44 +127,6 @@ export default function ExperiencePage() {
             </article>
           ))}
           <div style={{ borderTop: "1px solid var(--border)" }} />
-        </div>
-      </section>
-
-      {/* Credentials */}
-      <section className="section-container" style={{ borderTop: "1px solid var(--border)" }}>
-        <span className="section-label">Credentials</span>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))",
-            gap: "clamp(28px, 4vw, 56px)",
-            marginTop: "clamp(20px, 3vh, 32px)",
-          }}
-        >
-          <div>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h3)", fontWeight: 600, marginBottom: "1rem" }}>
-              Certifications
-            </h3>
-            <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: "0.6rem" }}>
-              {CERTS.map((c) => (
-                <li key={c} style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", borderTop: "1px solid var(--border)", paddingTop: "0.6rem" }}>
-                  {c}
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div>
-            <h3 style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-h3)", fontWeight: 600, marginBottom: "1rem" }}>
-              Education
-            </h3>
-            <p style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", lineHeight: 1.8, margin: 0 }}>
-              Diploma, Mechanical Engineering
-              <br />
-              Vidya Vikas Institute of Engineering and Technology
-              <br />
-              2015–2018
-            </p>
-          </div>
         </div>
       </section>
     </>

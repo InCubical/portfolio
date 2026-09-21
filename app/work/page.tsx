@@ -28,9 +28,10 @@ export default function WorkPage() {
         </em>
       </h1>
       <ScrollWords className="editorial" style={{ maxWidth: "58ch", marginBottom: "clamp(40px, 7vh, 72px)" }}>
-        A selection of brands and products shaped from identity and design to
-        launch and growth. Each one built to look sharp and earn its place in the
-        market.
+        Six engagements, same method: read the business, work out where growth
+        actually comes from, then build the stack around that answer. The most
+        recent one is a whole system rather than a set of campaigns, and it is
+        the one worth your time.
       </ScrollWords>
       <PortfolioGrid projects={featuredProjects} />
     </section>

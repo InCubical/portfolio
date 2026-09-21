@@ -35,8 +35,9 @@ export default function ContactPage() {
         <em style={{ color: "var(--accent)", fontStyle: "italic", fontWeight: 400 }}>talk.</em>
       </h1>
       <ScrollWords className="editorial" style={{ maxWidth: "52ch", marginBottom: "clamp(48px, 8vh, 80px)" }}>
-        Building something ambitious? Tell me about the brand, the goal, and where
-        you want to be. I&rsquo;ll come back with how I&rsquo;d approach it.
+        Tell me where the business actually makes money and what you think is
+        quietly blocking it. I&rsquo;ll come back with how I would build the
+        funnel, not a list of services.
       </ScrollWords>
 
       <div

@@ -4,38 +4,37 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import LineReveal from "@/components/LineReveal";
 import ScrollWords from "@/components/ScrollWords";
-import LogoMarquee from "@/components/LogoMarquee";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import { fadeUp } from "@/lib/motion";
 import { featuredProjects } from "@/app/data/projects";
 
-const DISCIPLINES = [
+const PRINCIPLES = [
   {
     num: "01",
-    title: "Growth Marketing",
-    desc: "Paid media, search, lifecycle and outreach run as one connected system, each channel sharpening the others and all pointed at the same outcome.",
+    title: "Diagnose before building",
+    desc: "Every engagement opens with the same question: where does revenue actually come from, and what is quietly blocking it. The channel plan comes after that answer, never before it.",
   },
   {
     num: "02",
-    title: "Brand & Design",
-    desc: "Identity, creative and content that make complex ideas land. Brand systems that look sharp and stay consistent everywhere they appear.",
+    title: "I bring my own stack",
+    desc: "Outbound, performance media, search, lifecycle, measurement and the web layer. I pick the tools, wire them together and operate them. No handoffs, no agency lag, no waiting on a queue to ship a test.",
   },
   {
     num: "03",
-    title: "Web & Product",
-    desc: "Websites and platforms built to convert and endure: fast, considered, and shaped around how people actually move through them.",
+    title: "Funnel first, channel second",
+    desc: "Traffic is the easy part. I build the whole path: demand capture, the conversion surface, qualification, follow up, and the reporting that tells you which part of it is lying to you.",
   },
   {
     num: "04",
-    title: "Demand & Outreach",
-    desc: "Precise, personalised outreach that reaches the right people at the right moment. Pipeline built on signal, not on spray.",
+    title: "Strategy and execution live in the same person",
+    desc: "I can spot the opportunity on Monday and have the campaign, the creative and the landing experience live by Friday, then read the result and move again.",
   },
 ];
 
 const EXPERIENCE_TEASER = [
-  { company: "Innobot Health", role: "Digital Content & Marketing Specialist", note: "US healthcare · RCM" },
-  { company: "InSource Expansion Group", role: "Digital Content Marketing Specialist", note: "Global expansion" },
-  { company: "InCubical", role: "Founder", note: "Since 2018" },
+  { company: "Innobot Health", role: "I own how this company acquires customers", note: "US revenue cycle" },
+  { company: "InSource Expansion Group", role: "No brand and no pipeline, to a working go to market", note: "Global expansion" },
+  { company: "InCubical", role: "Mechanical design and CNC programming", note: "Since 2018" },
 ];
 
 const headingStyle: React.CSSProperties = {
@@ -69,10 +68,10 @@ export default function Home() {
               delay={0.15}
               stagger={0.14}
               lines={[
-                "I help brands",
-                "grow with",
+                "I build the",
+                "acquisition engine,",
                 <em key="em" style={{ color: "var(--accent)", fontStyle: "italic" }}>
-                  intent.
+                  then I run it.
                 </em>,
               ]}
             />
@@ -96,9 +95,11 @@ export default function Home() {
               custom={4}
               style={{ maxWidth: "50ch" }}
             >
-              A growth partner for ambitious companies, working alongside founders
-              and leadership teams to turn marketing, design and data into a system
-              that compounds. <strong>Not one-off campaigns. Momentum that lasts.</strong>
+              Most companies hire three agencies and four specialists to do what I
+              do end to end: read the business, work out where growth actually
+              comes from, assemble the stack around that answer, and own the
+              number it produces. <strong>I am not a channel person. I am the
+              person you hand the funnel to.</strong>
             </motion.p>
             <motion.div
               initial="hidden"
@@ -152,13 +153,12 @@ export default function Home() {
       {/* ── Positioning statement ────────────────────────── */}
       <section className="section-container">
         <ScrollWords className="section-statement">
-          The brands that endure don&rsquo;t win by shouting louder. They win by
-          understanding their audience, their numbers and their next move more
-          clearly than anyone else,{" "}
+          Most growth problems are not traffic problems. They are a business
+          nobody has read properly yet,{" "}
           <span style={{ color: "var(--accent)" }}>
-            and building the systems to act on it.
+            and a funnel nobody owns all the way through.
           </span>{" "}
-          That is the work I do.
+          I do both.
         </ScrollWords>
       </section>
 
@@ -166,16 +166,18 @@ export default function Home() {
       <section className="section-container" style={{ borderTop: "1px solid var(--border)" }}>
         <span className="section-label">The person behind the work</span>
         <h2 style={{ ...headingStyle, maxWidth: "22ch" }}>
-          A builder at heart:{" "}
+          Engineering first,{" "}
           <em style={{ color: "var(--accent)", fontStyle: "italic", fontWeight: 400 }}>
-            designer, marketer, founder.
+            growth after.
           </em>
         </h2>
         <ScrollWords className="editorial" style={{ maxWidth: "60ch", marginBottom: "clamp(32px, 5vh, 56px)" }}>
-          A path that started in design, then marketing and web, and never stopped
-          connecting the two. Today that means working with companies across
-          healthcare and global expansion, and running a studio, Pixeldrive, that
-          helps brands look sharp, reach the right people, and grow on purpose.
+          I started in mechanical design and CNC programming. It is an odd place
+          to begin a growth career and it is the reason I work the way I do:
+          designing for manufacture teaches you to model the whole system before
+          you commit to it. Today that means full funnel demand for a US revenue
+          cycle company and a global expansion firm, plus Pixeldrive, my own
+          design, marketing and web studio.
         </ScrollWords>
       </section>
       <div
@@ -225,12 +227,12 @@ export default function Home() {
         variants={{ visible: { transition: { staggerChildren: 0.07 } } }}
       >
         <motion.span className="section-label" variants={fadeUp}>
-          What I do
+          How I operate
         </motion.span>
         <motion.h2 variants={fadeUp} style={{ ...headingStyle, maxWidth: "26ch" }}>
-          Four disciplines.{" "}
+          Not a list of services.{" "}
           <em style={{ color: "var(--accent)", fontStyle: "italic", fontWeight: 400 }}>
-            One growth engine.
+            A way of deciding.
           </em>
         </motion.h2>
         <div
@@ -241,7 +243,7 @@ export default function Home() {
             background: "var(--border)",
           }}
         >
-          {DISCIPLINES.map((d, i) => (
+          {PRINCIPLES.map((d, i) => (
             <motion.div
               key={d.num}
               variants={fadeUp}
@@ -324,14 +326,6 @@ export default function Home() {
           <PortfolioGrid projects={featuredProjects} />
         </motion.div>
       </motion.section>
-
-      {/* ── Tools ────────────────────────────────────────── */}
-      <section style={{ borderTop: "1px solid var(--border)", paddingTop: "clamp(48px, 8vh, 80px)" }}>
-        <div style={{ maxWidth: "var(--content-max)", margin: "0 auto", padding: "0 var(--gutter)", marginBottom: "clamp(28px, 4vh, 40px)" }}>
-          <span className="section-label">The stack I build with</span>
-        </div>
-        <LogoMarquee />
-      </section>
 
       {/* ── Experience teaser ────────────────────────────── */}
       <motion.section

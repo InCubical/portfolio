@@ -6,7 +6,33 @@ const CONTACT = [
   "+91 63617 56685",
   "incubical@hotmail.com",
   "linkedin.com/in/pathan97",
-  "Mysore, Karnataka, India",
+  "Mysore, India · works US hours",
+];
+
+const POSITIONING = "I build the acquisition engine, then I run it.";
+
+const SUMMARY = [
+  "Most companies hire three agencies and four specialists to do what I do end to end: read the business, work out where growth actually comes from, assemble the stack around that answer, and own the number it produces.",
+  "Six years of it, across healthcare, global expansion, real estate and consumer. Today that means full funnel demand for a US revenue cycle company and a global expansion firm, plus Pixeldrive, my own studio. I am not a channel person. I am the person you hand the funnel to.",
+];
+
+const PRINCIPLES = [
+  {
+    title: "Diagnose before building.",
+    body: "Every engagement opens with the same question: where does revenue actually come from, and what is quietly blocking it. The channel plan comes after that answer, never before it.",
+  },
+  {
+    title: "I bring my own stack.",
+    body: "Outbound, performance media, search, lifecycle, measurement and the web layer. I pick the tools, wire them together and operate them. No handoffs, no agency lag, no waiting on a queue to ship a test.",
+  },
+  {
+    title: "Funnel first, channel second.",
+    body: "Traffic is the easy part. I build the whole path: demand capture, the conversion surface, qualification, follow up, and the reporting that tells you which part of it is lying to you.",
+  },
+  {
+    title: "Strategy and execution live in the same person.",
+    body: "I can spot the opportunity on Monday and have the campaign, the creative and the landing experience live by Friday, then read the result and move again.",
+  },
 ];
 
 const EXPERIENCE = [
@@ -14,74 +40,48 @@ const EXPERIENCE = [
     role: "Digital Content & Marketing Specialist",
     company: "Innobot Health",
     period: "May 2024 – Present",
-    body: "Runs the full demand engine for a US revenue-cycle-management company: automated LinkedIn outreach with Expandi, email at scale with Instantly.ai, SEO, and paid media across Google, Meta and LinkedIn, plus the brand, infographics, social content and website that carry it.",
+    body: [
+      "I own how this company acquires customers. US revenue cycle management, a long cycle, high trust sale into hospital finance and physician group leadership.",
+      "Built and run the entire acquisition system: signal based outbound at scale across email and LinkedIn, performance media across Google, Meta and LinkedIn, an organic search and content programme that compounds, and the conversion architecture holding it all together. The brand surface it travels on is mine too, the site, the landing experiences, the creative, the social.",
+      "One person, whole funnel, first touch to booked meeting.",
+    ],
   },
   {
     role: "Digital Content Marketing Specialist",
     company: "InSource Expansion Group",
     period: "Jul 2024 – Present",
-    body: "Built the brand from a blank slate for a global expansion company, the website, SEO foundation, content and identity, and drives the campaigns behind it: performance and keyword strategy, blogs, ads, and LinkedIn outreach that converts.",
-  },
-  {
-    role: "Founder",
-    company: "InCubical",
-    period: "2018 – Present",
-    body: "A studio spanning design, marketing and web. Grew from local design work in Mysore into an end-to-end practice that takes brands from idea to launch to growth.",
+    body: [
+      "Took a global expansion company from no brand and no pipeline to a working go to market. Positioning and identity first, then the website and search foundation, then the demand programmes that run on top: performance campaigns, keyword and content strategy, and an outbound motion aimed only at the accounts worth having.",
+      "Built the story before the machine, because a machine selling a weak story just burns budget faster.",
+    ],
   },
   {
     role: "Head of Marketing",
     company: "M & S Associates",
     period: "Sep 2022 – Feb 2024",
-    body: "Owned brand and growth for a real-estate firm. Built the website (React, Firebase), ran ads and lead generation, and positioned M&S to stand out through research, targeting and sharp creative.",
+    body: [
+      "Owned brand and revenue for a real estate firm. Repositioned how the company presented itself, shipped the website myself in React and Firebase, and ran the acquisition programmes that fed the sales team.",
+      "In a market where every competitor says the same three things, the edge came from sharper research, tighter targeting and creative that did not look like everyone else's.",
+    ],
   },
   {
     role: "Product Marketing Specialist",
     company: "Malnad Herbals",
     period: "Jul 2020 – Aug 2022",
-    body: "Shaped a natural, cruelty-free beauty brand end to end: packaging, promotional and social creative, an SEO-friendly site, and Google and Meta campaigns that turned attention into sales.",
+    body: [
+      "Built a natural, cruelty free beauty brand end to end: the packaging on the shelf, the creative in the feed, the site it all pointed at, and the paid programmes across Google and Meta that turned attention into repeat purchase.",
+      "Consumer taught me unit economics the hard way. Every rupee of spend had to come back, and the dashboard said so within the week.",
+    ],
   },
-];
-
-const CERTS = [
-  "Search Ads 360 Certification",
-  "Display & Video 360 Certification",
-  "Campaign Manager 360 Certification",
-  "Google Analytics Certification",
-  "Creative Certification",
-  "Fundamentals of Digital Marketing",
-];
-
-const SKILLS = [
-  "SEO",
-  "Content Marketing",
-  "Social Media Marketing",
-  "Email Marketing",
-  "Analytics",
-  "Marketing Automation",
-  "Conversion Rate Optimization",
-  "Branding",
-  "Graphic Design",
-  "UX / UI Design",
-  "Web Design",
-  "Print Design",
-];
-
-const TOOLS = [
-  "Adobe Photoshop",
-  "Adobe Illustrator",
-  "Adobe InDesign",
-  "After Effects",
-  "Premiere Pro",
-  "Figma",
-  "Webflow",
-  "WordPress",
-  "SEMrush",
-  "Ahrefs",
-  "Expandi.io",
-  "Instantly.ai",
-  "Google Analytics",
-  "HubSpot",
-  "React / Next.js",
+  {
+    role: "Founder",
+    company: "InCubical",
+    period: "2018 – Present",
+    body: [
+      "Where I started. A mechanical design and CNC programming practice: part design, tooling, and the G code that actually cut the metal.",
+      "It is the least marketing thing on this page and quietly the most useful. Designing for manufacture teaches you to model the whole system before you commit to it, to work out where it fails before you build it, and to respect a constraint you cannot argue your way around. I run growth the same way.",
+    ],
+  },
 ];
 
 const labelStyle: React.CSSProperties = {
@@ -95,32 +95,6 @@ const labelStyle: React.CSSProperties = {
   paddingTop: "1.25rem",
   marginBottom: "1.5rem",
 };
-
-function Tags({ items }: { items: string[] }) {
-  return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(180px, 1fr))",
-        gap: "0.5rem 1.5rem",
-      }}
-    >
-      {items.map((s) => (
-        <span
-          key={s}
-          style={{
-            fontSize: "var(--text-small)",
-            color: "var(--muted-light)",
-            borderBottom: "1px solid var(--border)",
-            paddingBottom: "0.4rem",
-          }}
-        >
-          {s}
-        </span>
-      ))}
-    </div>
-  );
-}
 
 export default function ResumePage() {
   return (
@@ -166,7 +140,7 @@ export default function ResumePage() {
               margin: "0.75rem 0 0",
             }}
           >
-            Growth Partner · Marketing, Design &amp; Web
+            Growth Partner · Demand, Brand &amp; Revenue Systems
           </p>
           <div style={{ display: "flex", alignItems: "baseline", gap: "0.5rem", flexWrap: "wrap", marginTop: "0.6rem" }}>
             <span
@@ -229,17 +203,72 @@ export default function ResumePage() {
         <span className="section-label" style={labelStyle}>
           Summary
         </span>
-        <p style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", lineHeight: 1.75, maxWidth: "68ch", margin: 0 }}>
-          A growth partner for ambitious brands, connecting marketing, design and
-          web into systems that compound. The work spans brand identities, demand
-          engines and websites, built alongside founders and leadership teams
-          across healthcare, global expansion, real estate and D2C. Founder of
-          Pixeldrive.
+        <p
+          style={{
+            fontFamily: "var(--font-display)",
+            fontSize: "clamp(22px, 2.6vw, 30px)",
+            fontWeight: 600,
+            letterSpacing: "var(--tracking-tight)",
+            lineHeight: 1.25,
+            color: "var(--foreground)",
+            maxWidth: "24ch",
+            margin: "0 0 1.5rem",
+          }}
+        >
+          {POSITIONING}
         </p>
+        {SUMMARY.map((p) => (
+          <p
+            key={p.slice(0, 24)}
+            style={{
+              fontSize: "var(--text-body)",
+              color: "var(--muted-light)",
+              lineHeight: 1.75,
+              maxWidth: "68ch",
+              margin: "0 0 1rem",
+            }}
+          >
+            {p}
+          </p>
+        ))}
+      </div>
+
+      {/* How I operate */}
+      <div className="resume-section" style={{ marginBottom: "clamp(28px, 4vh, 44px)" }}>
+        <span className="section-label" style={labelStyle}>
+          How I operate
+        </span>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))",
+            gap: "clamp(1.25rem, 3vw, 2rem)",
+          }}
+        >
+          {PRINCIPLES.map((p) => (
+            <div key={p.title}>
+              <h2
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontSize: "clamp(16px, 1.8vw, 19px)",
+                  fontWeight: 600,
+                  letterSpacing: "-0.01em",
+                  margin: "0 0 0.5rem",
+                  color: "var(--foreground)",
+                }}
+              >
+                {p.title}
+              </h2>
+              <p style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", lineHeight: 1.7, margin: 0 }}>
+                {p.body}
+              </p>
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Experience */}
-      <div className="resume-section" style={{ marginBottom: "clamp(28px, 4vh, 44px)" }}>
+      <div className="resume-section">
         <span className="section-label" style={labelStyle}>
           Experience
         </span>
@@ -265,56 +294,17 @@ export default function ResumePage() {
               <p style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-small)", color: "var(--accent)", margin: "0.2rem 0 0.6rem" }}>
                 {e.company}
               </p>
-              <p style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", lineHeight: 1.7, margin: 0, maxWidth: "72ch" }}>
-                {e.body}
-              </p>
+              {e.body.map((b) => (
+                <p
+                  key={b.slice(0, 24)}
+                  style={{ fontSize: "var(--text-body)", color: "var(--muted-light)", lineHeight: 1.7, margin: "0 0 0.75rem", maxWidth: "72ch" }}
+                >
+                  {b}
+                </p>
+              ))}
             </div>
           ))}
         </div>
-      </div>
-
-      {/* Education */}
-      <div className="resume-section" style={{ marginBottom: "clamp(28px, 4vh, 44px)" }}>
-        <span className="section-label" style={labelStyle}>
-          Education
-        </span>
-        <div style={{ display: "flex", justifyContent: "space-between", flexWrap: "wrap", gap: "0.5rem", alignItems: "baseline" }}>
-          <div>
-            <h2 style={{ fontFamily: "var(--font-display)", fontSize: "clamp(18px, 2vw, 22px)", fontWeight: 600, margin: 0 }}>
-              Diploma, Mechanical Engineering
-            </h2>
-            <p style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-small)", color: "var(--accent)", margin: "0.2rem 0 0" }}>
-              Vidya Vikas Institute of Engineering &amp; Technology
-            </p>
-          </div>
-          <span style={{ fontFamily: "var(--font-display)", fontSize: "var(--text-small)", color: "var(--muted)", letterSpacing: "var(--tracking-wide)" }}>
-            2015 – 2018
-          </span>
-        </div>
-      </div>
-
-      {/* Certifications */}
-      <div className="resume-section" style={{ marginBottom: "clamp(28px, 4vh, 44px)" }}>
-        <span className="section-label" style={labelStyle}>
-          Certifications · Google
-        </span>
-        <Tags items={CERTS} />
-      </div>
-
-      {/* Skills */}
-      <div className="resume-section" style={{ marginBottom: "clamp(28px, 4vh, 44px)" }}>
-        <span className="section-label" style={labelStyle}>
-          Skills
-        </span>
-        <Tags items={SKILLS} />
-      </div>
-
-      {/* Tools */}
-      <div className="resume-section">
-        <span className="section-label" style={labelStyle}>
-          Tools
-        </span>
-        <Tags items={TOOLS} />
       </div>
     </section>
   );
