@@ -260,6 +260,68 @@
   margin: 0;
 }
 
+/* ── Generic item grid: instrumentation, reporting views ─────── */
+
+.st-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+@media (min-width: 640px) {
+  .st-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 980px) {
+  .st-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+.st-item {
+  background: var(--background);
+  padding: clamp(18px, 2.4vw, 28px);
+}
+
+.st-item-k {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.7rem;
+}
+
+.st-item-t {
+  font-family: var(--font-display);
+  font-size: clamp(16px, 1.7vw, 20px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.25;
+  color: var(--foreground);
+  margin: 0 0 0.5rem;
+}
+
+.st-item-d {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+/* The rebuild callout: old stack against new */
+.st-rebuild {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: clamp(24px, 3.5vh, 36px);
+}
+
+.st-rebuild .st-tool { font-size: 13px; padding: 0.55rem 1rem; }
+
 /* ── Closer ──────────────────────────────────────────────────── */
 
 .st-closer {

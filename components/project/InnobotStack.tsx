@@ -23,7 +23,7 @@ const LAYERS: { name: string; desc: string; tools: Tool[] }[] = [
     tools: [
       { label: "Google Ads" },
       { label: "Organic search" },
-      { label: "The web layer" },
+      { label: "Custom Next.js site", current: true },
     ],
   },
   {
@@ -37,7 +37,7 @@ const LAYERS: { name: string; desc: string; tools: Tool[] }[] = [
   },
   {
     name: "Pipeline",
-    desc: "Where a reply stops being a reply and becomes an opportunity somebody owns, with the context already attached to it.",
+    desc: "Where a reply stops being a reply and becomes an opportunity somebody owns, with the context already attached. It also carries the executive dashboards, so leadership reads the funnel without asking for it.",
     tools: [
       { label: "Monday.com CRM", current: true },
       { label: "HubSpot", replaced: true },
@@ -51,6 +51,57 @@ const LAYERS: { name: string; desc: string; tools: Tool[] }[] = [
       { label: "ElevenLabs" },
       { label: "Higgsfield" },
     ],
+  },
+];
+
+const INSTRUMENTATION = [
+  {
+    k: "01",
+    t: "Every conversion path is its own event",
+    d: "Demo requests, contact forms, whitepaper downloads and booking steps each fire deliberately, because I wrote the handler rather than hoping a plugin caught it.",
+  },
+  {
+    k: "02",
+    t: "Attribution survives the handoff",
+    d: "The campaign, keyword or sequence that produced a lead travels into the CRM attached to that lead, so the source is still knowable at the point somebody closes it.",
+  },
+  {
+    k: "03",
+    t: "Named for the questions, not the tool",
+    d: "Events carry the names the business actually uses when it asks what happened. Reporting built on a plugin's guess at naming is reporting nobody trusts twice.",
+  },
+  {
+    k: "04",
+    t: "Behaviour, not just outcomes",
+    d: "Heatmaps and session replay on the pages that carry pipeline, so a drop-off is something I can watch rather than something I have to theorise about.",
+  },
+  {
+    k: "05",
+    t: "Nothing loads that nobody needs",
+    d: "A custom build instead of a theme and a stack of plugins. The pages a paid click lands on are the fastest pages on the site, which is not a coincidence.",
+  },
+  {
+    k: "06",
+    t: "A system underneath it",
+    d: "The site runs on a design system I wrote before I wrote the site, which is the next section on this page and the reason the whole thing stays coherent.",
+  },
+];
+
+const REPORTING = [
+  {
+    k: "Pipeline",
+    t: "Where it came from",
+    d: "Source, campaign and sequence, visible on the board rather than assembled by hand when somebody asks.",
+  },
+  {
+    k: "Stage",
+    t: "What moved this week",
+    d: "Which opportunities advanced, which went quiet, and which need a person before they go cold.",
+  },
+  {
+    k: "Programmes",
+    t: "What is working",
+    d: "How each demand programme is contributing, so spend decisions are made against the board and not against a memory.",
   },
 ];
 
@@ -135,12 +186,45 @@ export default function InnobotStack() {
             <span className="st-ba-k">Now</span>
             <h3 className="st-ba-t">A full funnel with one owner</h3>
             <p className="st-ba-d">
-              Demand capture, conversion architecture, outbound at scale, a CRM the process fits,
-              measurement that survives scrutiny, and a content pipeline that produces the proof
-              which closes the deal. One person owns the whole path, and a team I hired runs inside
-              it.
+              A site I wrote myself, instrumented for lead generation from the first commit. Demand
+              capture, conversion architecture, outbound at scale, a CRM the process fits,
+              measurement that survives scrutiny, executive reporting nobody has to request, and a
+              content pipeline producing the proof that closes. One person owns the whole path, and
+              a team I hired runs inside it.
             </p>
           </div>
+        </div>
+
+        <div className="st-head">
+          <h2 className="st-h">
+            So I rebuilt the site. <em>All of it.</em>
+          </h2>
+          <div className="st-rebuild">
+            <span className="st-tool is-replaced">WordPress</span>
+            <span className="st-call-arrow">→</span>
+            <span className="st-tool is-current">Next.js, custom built</span>
+          </div>
+          <p className="st-p">
+            A theme cannot be instrumented properly. You can bolt analytics onto one, and most
+            companies do, but what you end up measuring is whatever the theme happens to expose
+            rather than what the business needs to know. That gap is where attribution quietly dies.
+          </p>
+          <p className="st-p">
+            So I wrote the whole site myself. Custom from the ground up, which means the tracking is
+            part of the build instead of a plugin sitting on top of it guessing at what matters.
+            Lead generation is the thing this site exists to do, so it is the thing the
+            instrumentation is designed around rather than an afterthought bolted on at the end.
+          </p>
+        </div>
+
+        <div className="st-grid">
+          {INSTRUMENTATION.map((i) => (
+            <div className="st-item" key={i.k}>
+              <span className="st-item-k">{i.k}</span>
+              <h3 className="st-item-t">{i.t}</h3>
+              <p className="st-item-d">{i.d}</p>
+            </div>
+          ))}
         </div>
 
         <div className="st-layers">
@@ -184,6 +268,33 @@ export default function InnobotStack() {
                 <span className="st-tool is-current">{d.to}</span>
               </div>
               <p className="st-call-d">{d.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        <div className="st-head">
+          <h2 className="st-h">
+            The leadership team should not have to <em>ask me.</em>
+          </h2>
+          <p className="st-p">
+            The last mile of measurement is not a dashboard for the person who built it. It is a
+            view for the people who do not have time to request one. So the CRM carries its own
+            reporting: board level dashboards I built for the executive team, showing where pipeline
+            came from, what stage it is in and what actually moved this week.
+          </p>
+          <p className="st-p">
+            Nobody waits on me to assemble a deck, and nobody takes a number on trust. A growth
+            function that only the growth person can read is a growth function nobody ends up
+            believing.
+          </p>
+        </div>
+
+        <div className="st-grid">
+          {REPORTING.map((r) => (
+            <div className="st-item" key={r.k}>
+              <span className="st-item-k">{r.k}</span>
+              <h3 className="st-item-t">{r.t}</h3>
+              <p className="st-item-d">{r.d}</p>
             </div>
           ))}
         </div>
