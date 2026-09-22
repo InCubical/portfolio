@@ -29,7 +29,6 @@ export const metadata: Metadata = {
   title: "Shaheed Khan · Growth Partner",
   description:
     "I build the acquisition engine, then I run it. Full funnel demand, the brand surface and the web layer for a US revenue cycle company and a global expansion firm. Founder of Pixeldrive.",
-  icons: { icon: "/images/logo.png" },
   openGraph: {
     images: [
       {
