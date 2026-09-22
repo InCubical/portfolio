@@ -1,5 +1,7 @@
 import Link from "next/link";
+import type { CSSProperties } from "react";
 import type { Project } from "@/app/data/projects";
+import "@/app/work-cards.css";
 
 function PortfolioItem({ project }: { project: Project }) {
   return (
@@ -8,13 +10,25 @@ function PortfolioItem({ project }: { project: Project }) {
       data-cursor="card"
       className="portfolio-card group block"
     >
-      <div className="relative aspect-[4/3] overflow-hidden">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={project.thumb}
-          alt={project.title}
-          className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
-        />
+      <div className={`pc-tile${project.mark ? " is-mark" : ""}`}>
+        {project.mark ? (
+          <>
+            <div className="pc-mark-glow" aria-hidden />
+            <div
+              className="pc-mark"
+              role="img"
+              aria-label={`${project.title} logo`}
+              style={{ "--mark": `url(${project.mark})` } as CSSProperties}
+            />
+          </>
+        ) : (
+          // eslint-disable-next-line @next/next/no-img-element
+          <img src={project.thumb} alt={project.title} className="pc-img" />
+        )}
+        <span className="pc-cap">
+          {project.kicker ?? "Case study"}
+          <span aria-hidden>→</span>
+        </span>
       </div>
       <div className="mt-4">
         <h3

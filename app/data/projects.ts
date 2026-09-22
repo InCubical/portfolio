@@ -14,6 +14,10 @@ export type Project = {
   heroBackground?: string;
   /** `dark` flips the hero title to light type. */
   heroTone?: "light" | "dark";
+  /** Logo painted through a CSS mask on the work card, instead of a photo. */
+  mark?: string;
+  /** Short descriptor revealed on the work card hover. */
+  kicker?: string;
   featured: boolean;
   blocks: ProjectBlock[];
   gallery?: string[];
@@ -32,6 +36,8 @@ export const projects: Project[] = [
     heroBackground:
       "radial-gradient(60% 55% at 20% 15%, rgba(47,211,200,0.22), transparent 70%), radial-gradient(55% 50% at 85% 80%, rgba(47,211,200,0.14), transparent 72%), #050708",
     heroTone: "dark",
+    mark: `${R}/innobot-health/innobot-logo.png`,
+    kicker: "Design system · Full funnel",
     featured: true,
     showcase: "innobot",
     blocks: [
@@ -80,6 +86,7 @@ export const projects: Project[] = [
     title: "MSA",
     thumb: `${R}/msa/Logo.jpg`,
     hero: `${R}/msa/Branding.jpg`,
+    kicker: "Marketplace · Brand & demand",
     featured: true,
     blocks: [
       {
@@ -112,6 +119,11 @@ export const projects: Project[] = [
         body: "Marketing that hands leads to a sales team it does not speak to is marketing that gets blamed for the pipeline and never gets to fix it. I ran both. So the targeting, the ad, the landing experience and what the salesperson actually said on the call were one decision instead of four, and when something was not converting I could change any part of it by Friday.",
       },
       {
+        heading: "The brand surface, at volume",
+        level: 2,
+        body: "Identity, print, social creative and all the collateral a property business runs on, produced at the pace a listings business actually needs rather than the pace an agency schedules it. When the creative and the campaign come from the same desk, the version that goes live is the version that was tested, not the one that survived a handover.",
+      },
+      {
         full: true,
         body: "In a market where every competitor says the same three things and buys the same twenty keywords, the edge came from sharper research, tighter targeting and creative that did not look like everyone else's. That is the entire game. Most firms never play it.",
       },
@@ -133,6 +145,7 @@ export const projects: Project[] = [
     title: "Malnad Herbals",
     thumb: `${R}/malnad-herbals/Trushyne.png`,
     hero: `${R}/malnad-herbals/Trupthi.png`,
+    kicker: "Brand built from scratch",
     featured: true,
     blocks: [
       {
@@ -143,6 +156,11 @@ export const projects: Project[] = [
         heading: "Everything, starting from a logo",
         level: 2,
         body: "No website, no packaging, no photography, no accounts, no listings, no category presence of any kind. I built all of it. That is either the best or the worst way to learn a category depending on which week you ask me, and it is the reason I will never again believe a brand problem is only a brand problem.",
+      },
+      {
+        heading: "The website, and every account",
+        level: 2,
+        body: "I designed and built the site, then opened and grew every social account from zero. A brand with no audience has no distribution, and a brand with no distribution is just a design project with nicer photographs. Getting the first people to care is a different discipline to making the thing look right, and both had to happen at the same time with nobody else to hand either one to.",
       },
       {
         heading: "The product before the marketing",
@@ -162,7 +180,12 @@ export const projects: Project[] = [
       {
         heading: "Selling on somebody else's platform",
         level: 2,
-        body: "I set the brand up across Amazon, Flipkart and Meesho and owned the listings end to end. Marketplaces do not reject you politely. A listing that trips a compliance check simply stops existing, so the packaging had to satisfy each platform's rules as well as the customer, and the outer cartons had to survive their logistics rather than my expectations of it.",
+        body: "I set the brand up across Amazon, Flipkart and Meesho and owned the listings end to end. Marketplaces do not reject you politely. A listing that trips a compliance check simply stops existing, so the packaging had to satisfy each platform's rules as well as the customer, and every claim on a label had to be one we could actually stand behind.",
+      },
+      {
+        heading: "The box nobody designs",
+        level: 2,
+        body: "Then the outer shipping cartons, which almost nobody treats as brand and which is the first thing a customer physically touches. They had to survive a marketplace courier, carry the identity when they arrived intact, and cost little enough that the unit economics still worked after the platform took its cut. Three constraints pulling against each other, settled on a factory floor rather than in a review.",
       },
       {
         heading: "The programmes on top",
@@ -198,6 +221,7 @@ export const projects: Project[] = [
     title: "Elegant Spaces",
     thumb: `${R}/elegant-spaces/Brading_and_dipaly.jpg`,
     hero: `${R}/elegant-spaces/Catalogue.jpg`,
+    kicker: "Identity · Web · CRM",
     featured: true,
     blocks: [
       {
@@ -235,6 +259,11 @@ export const projects: Project[] = [
         body: "Architectural work is a long, considered, expensive decision. An enquiry that lands on a Tuesday and gets remembered on a Friday is an enquiry that has already gone elsewhere, so they got a CRM and, more importantly, a process to go with it. Software does not fix follow up. It just makes it obvious who is not doing it.",
       },
       {
+        heading: "Owning the local map",
+        level: 2,
+        body: "Listings and directory presence tightened up so a local search resolved to this firm, with consistent detail everywhere it appeared. Unglamorous, close to free, and the single cheapest thing almost every local firm never gets round to doing properly.",
+      },
+      {
         full: true,
         body: "Took a firm that did strong work nobody could find, and made it the one that turns up and looks the part when someone local goes looking.",
       },
@@ -254,6 +283,7 @@ export const projects: Project[] = [
     title: "Nexus Servicing",
     thumb: `${R}/nexus-servicing/Website.jpg`,
     hero: `${R}/nexus-servicing/Logo.jpg`,
+    kicker: "Local demand · Retention",
     featured: true,
     blocks: [
       {
@@ -274,6 +304,11 @@ export const projects: Project[] = [
         heading: "Search built for how people describe a problem",
         level: 2,
         body: "An organic foundation and a paid programme covering every appliance and trade the business serviced, matched to how someone describes what broke rather than what a technician would call the repair. People type what happened, not what the fix is named.",
+      },
+      {
+        heading: "Every appliance, one funnel",
+        level: 2,
+        body: "Air conditioning, refrigerators, washing machines, microwaves, televisions and chimneys, plus plumbing and electrical work. Each one is a different search, a different urgency and a different margin, and all of them had to arrive down one funnel that could still tell them apart at the point a technician was dispatched.",
       },
       {
         heading: "Speed as a conversion feature",
@@ -305,6 +340,7 @@ export const projects: Project[] = [
     title: "Geena Apparel",
     thumb: `${R}/geena-apparel/packing_box.jpg`,
     hero: `${R}/geena-apparel/packing_box.jpg`,
+    kicker: "Brand identity only",
     featured: true,
     blocks: [
       {

@@ -39,6 +39,21 @@
   .ibh { min-height: 76vh; }
 }
 
+/* Faint grid ground, masked to a soft pool so it never reaches the edges.
+   Static on purpose: the motion budget is spent on the mark, not the floor. */
+.ibh::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, rgba(47, 211, 200, 0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(47, 211, 200, 0.06) 1px, transparent 1px);
+  background-size: 64px 64px;
+  -webkit-mask-image: radial-gradient(72% 62% at 50% 50%, #000 0%, transparent 78%);
+  mask-image: radial-gradient(72% 62% at 50% 50%, #000 0%, transparent 78%);
+}
+
 .ibh-glow {
   position: absolute;
   inset: 0;
@@ -61,7 +76,7 @@
   mask-position: center;
   -webkit-mask-size: contain;
   mask-size: contain;
-  animation: ibhRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+  animation: ibhReveal 0.95s cubic-bezier(0.22, 1, 0.36, 1) backwards;
 }
 
 /* Clipped by the parent's mask, so the sweep only shows inside the mark. */
@@ -90,6 +105,21 @@
 
 @keyframes ibhRise {
   from { opacity: 0; transform: translateY(14px); }
+}
+
+/* The mark wipes in left to right rather than simply fading up. */
+@keyframes ibhReveal {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    clip-path: inset(0 100% 0 0);
+  }
+  55% { opacity: 1; }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    clip-path: inset(0 0 0 0);
+  }
 }
 
 @keyframes ibhBreathe {
