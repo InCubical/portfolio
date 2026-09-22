@@ -186,7 +186,7 @@ export default function InnobotStack() {
             <span className="st-ba-k">Now</span>
             <h3 className="st-ba-t">A full funnel with one owner</h3>
             <p className="st-ba-d">
-              A site I wrote myself, instrumented for lead generation from the first commit. Demand
+              A site I wrote myself, instrumented for pipeline from the first commit. Demand
               capture, conversion architecture, outbound at scale, a CRM the process fits,
               measurement that survives scrutiny, executive reporting nobody has to request, and a
               content pipeline producing the proof that closes. One person owns the whole path, and
@@ -212,7 +212,7 @@ export default function InnobotStack() {
           <p className="st-p">
             So I wrote the whole site myself. Custom from the ground up, which means the tracking is
             part of the build instead of a plugin sitting on top of it guessing at what matters.
-            Lead generation is the thing this site exists to do, so it is the thing the
+            Producing qualified pipeline is the only reason this site exists, so it is what the
             instrumentation is designed around rather than an afterthought bolted on at the end.
           </p>
         </div>

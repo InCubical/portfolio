@@ -84,31 +84,36 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "M & S Associates works across real estate, construction and architectural design. I owned brand and revenue, which in a market this crowded meant fixing the story before touching the spend.",
+        body: "M & S Associates was a marketplace before anyone local was calling it that. Demand on one side, supply on the other, and a business that only worked if both sides turned up.",
       },
       {
-        heading: "Positioning first",
+        heading: "Which side breaks first",
         level: 2,
-        body: "Every competitor in this market says the same three things about trust, quality and experience. None of it separates anyone. I repositioned how the company presented itself so that a buyer could tell within a sentence what M & S actually did differently, then rebuilt the brand surface around that answer.",
+        body: "A marketplace fails on its thinner side, so the opening question was never how to get more traffic. It was which side runs out first, and what it costs to keep that side stocked. Every decision after that followed from the answer, which is why the spend was never split evenly between buyers and sellers the way it would have been if I had arrived with a template.",
       },
       {
         heading: "The web layer, shipped myself",
         level: 2,
-        body: "I built and deployed the website in React and Firebase rather than waiting on a queue. Owning the code meant a property, a campaign or a new service could go live the day it was decided, and the site could be shaped around how buyers actually moved through it rather than around a template.",
+        body: "I built and deployed the platform in React and Firebase rather than waiting in a queue behind somebody else's roadmap. Owning the code meant a listing type, a campaign or an entire new service could go live the day it was decided, and the product could be shaped around how people actually moved through it.",
       },
       {
-        heading: "Demand across two businesses",
+        heading: "Demand on every surface that paid",
         level: 2,
-        body: "Real estate and construction are different buyers with different timelines, so they got different programmes: organic search and performance media for the property listings, and a slower, credibility led motion for the design and build side.",
+        body: "Performance media across search and social, run as one programme rather than as separate channels reporting to separate people. Property is researched publicly and decided privately, so the job was to be present through a long consideration window without paying twice for the same person.",
       },
       {
-        heading: "Pipeline the sales team could work",
+        heading: "Measurement that survived a Monday meeting",
         level: 2,
-        body: "The point was never traffic. It was qualified enquiries landing with enough context attached that the sales team knew which property, which budget and which stage before they picked up the phone.",
+        body: "Analytics, search coverage and session behaviour wired up properly, because the fastest way to lose an argument about budget is to be the only person in the room without a number. The reporting existed to tell me which part of the funnel was lying, and it usually was.",
+      },
+      {
+        heading: "I had the sales team as well",
+        level: 2,
+        body: "Marketing that hands leads to a sales team it does not speak to is marketing that gets blamed for the pipeline and never gets to fix it. I ran both. So the targeting, the ad, the landing experience and what the salesperson actually said on the call were one decision instead of four, and when something was not converting I could change any part of it by Friday.",
       },
       {
         full: true,
-        body: "The edge came from sharper research, tighter targeting and creative that did not look like everyone else's. In a market where everyone buys the same keywords, that is the whole game.",
+        body: "In a market where every competitor says the same three things and buys the same twenty keywords, the edge came from sharper research, tighter targeting and creative that did not look like everyone else's. That is the entire game. Most firms never play it.",
       },
     ],
     gallery: [
@@ -132,27 +137,37 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "Malnad Herbals makes natural skin and hair products: vegan, cruelty free, no parabens, no GMO. I built the brand end to end, from the packaging on the shelf to the programmes that sold it.",
+        body: "They handed me a logo. That was the brand. The products existed, barely, still in testing, and there was nothing to show anyone.",
       },
       {
-        heading: "A brand that had to survive being picked up",
+        heading: "Everything, starting from a logo",
         level: 2,
-        body: "Consumer beauty is judged in about two seconds, in hand, next to a competitor. The identity and the product design had to carry the ethical position on sight, without a paragraph explaining it, and then hold up equally in a feed at thumbnail size.",
+        body: "No website, no packaging, no photography, no accounts, no listings, no category presence of any kind. I built all of it. That is either the best or the worst way to learn a category depending on which week you ask me, and it is the reason I will never again believe a brand problem is only a brand problem.",
       },
       {
-        heading: "Built for the shelf and the scroll",
+        heading: "The product before the marketing",
         level: 2,
-        body: "Packaging, promotional creative and social content made as one system rather than as separate jobs, so the product a customer saw in an ad was recognisably the product that arrived in the box.",
+        body: "I designed the products themselves, not just the campaigns pointed at them. Natural, vegan and cruelty free are claims a customer has to believe in about two seconds while holding a bottle next to a competitor, so the packaging had to carry the whole ethical position on sight and still read at thumbnail size in a feed.",
       },
       {
-        heading: "Everywhere the buyer already was",
+        heading: "The factory floor",
         level: 2,
-        body: "The brand ran on its own site and across the marketplaces customers actually shop on, with the listings, the imagery and the copy treated as a conversion surface in their own right rather than as an afterthought.",
+        body: "I spent more time in package printing factories than in a design tool. Going back and forth on proofs, standing over runs, checking boxes coming off the line and rejecting the ones that looked correct on a screen and wrong in a hand. Nothing teaches you what a brand actually is faster than watching one get manufactured badly.",
       },
       {
-        heading: "Performance media with nowhere to hide",
+        heading: "Rendering what did not exist yet",
         level: 2,
-        body: "Search, display and video programmes pointed at a funnel built to turn attention into a second purchase, not just a first one. Consumer is unforgiving that way. A brand that only ever wins the first order does not survive its own ad budget.",
+        body: "The range was still in testing, so there was nothing to photograph and no budget to wait. I built the products in Blender and rendered the whole line before the line was real. The launch creative shipped ahead of the product, which is the only reason the launch happened when it did.",
+      },
+      {
+        heading: "Selling on somebody else's platform",
+        level: 2,
+        body: "I set the brand up across Amazon, Flipkart and Meesho and owned the listings end to end. Marketplaces do not reject you politely. A listing that trips a compliance check simply stops existing, so the packaging had to satisfy each platform's rules as well as the customer, and the outer cartons had to survive their logistics rather than my expectations of it.",
+      },
+      {
+        heading: "The programmes on top",
+        level: 2,
+        body: "Only once all of that existed did the paid and social programmes go on top, built to turn attention into a second purchase rather than a first one. A consumer brand that only ever wins the first order does not survive its own ad budget.",
       },
       {
         full: true,
@@ -187,36 +202,41 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "Elegant Spaces builds and designs. Good work, almost no visibility, and a local market where the competitor with the better shopfront wins the enquiry regardless of who builds better.",
+        body: "A few engineers and architects who left to start their own firm. Genuinely good at the work, and completely invisible everywhere the work was not.",
       },
       {
         heading: "The diagnosis",
         level: 2,
-        body: "The problem was not demand. People were already searching for exactly what this company did. The problem was that when they searched, Elegant Spaces was not there, and when they arrived by any other route there was nothing that made the quality of the work obvious. So the work started with being findable and being credible, in that order.",
+        body: "The problem was never demand. People were already searching for exactly what this firm did, in plain language, every week. The problem was that the firm was not there when they looked, and that anyone who did arrive by some other route found nothing that made the quality of the work obvious. Findable first, credible second. In that order, because credibility you cannot reach is a brochure.",
+      },
+      {
+        heading: "The identity, and the one I lost",
+        level: 2,
+        body: "They had a vision for the logo and I put a lot of directions in front of them. They chose the one I liked least. It is their firm and their name, so it was their call to make, and I still think they got it wrong. Then I built the entire identity around their answer and did it properly, because a brand you are sulking about is a brand you deliver badly, and that is a worse outcome than losing an argument about a logo.",
       },
       {
         heading: "Organic search as the foundation",
         level: 2,
-        body: "A search programme built around the services people actually type, not the ones the industry likes to call them. Construction and architectural design get searched for in plain language, and matching that language was most of the win.",
+        body: "A search programme built around the services people actually type, not the ones the industry prefers to call them. Construction and architectural design get searched for in ordinary words, and matching that language rather than correcting it was most of the win.",
+      },
+      {
+        heading: "The website and the brand surface",
+        level: 2,
+        body: "A design and build firm is judged on physical things. The site, the catalogue, the banners and the cards all had to say the same thing in the same voice, because a prospect usually meets two of them before they ever meet a person.",
       },
       {
         heading: "Performance media on top",
         level: 2,
-        body: "Paid programmes across search and display to cover the ground the organic work had not reached yet, and to hold position on the terms that mattered most while the slower work compounded underneath.",
+        body: "Paid programmes across search and display to hold ground the organic work had not reached yet, and to stay present on the terms that mattered most while the slower asset compounded underneath it.",
       },
       {
-        heading: "The brand surface, on and offline",
+        heading: "A CRM, because it is B2B",
         level: 2,
-        body: "A design and build firm gets judged on physical things. The catalogue, the banners, the cards and the site had to say the same thing in the same voice, because a prospect often meets two of them before they ever meet a person.",
-      },
-      {
-        heading: "Owning the local map",
-        level: 2,
-        body: "Listings and directory presence tightened up so that a local search resolved to this company, with consistent detail everywhere it appeared.",
+        body: "Architectural work is a long, considered, expensive decision. An enquiry that lands on a Tuesday and gets remembered on a Friday is an enquiry that has already gone elsewhere, so they got a CRM and, more importantly, a process to go with it. Software does not fix follow up. It just makes it obvious who is not doing it.",
       },
       {
         full: true,
-        body: "Took a company that did strong work nobody could find, and made it the one that turns up and looks the part when someone local goes looking.",
+        body: "Took a firm that did strong work nobody could find, and made it the one that turns up and looks the part when someone local goes looking.",
       },
     ],
     gallery: [
@@ -230,6 +250,57 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: "nexus-servicing",
+    title: "Nexus Servicing",
+    thumb: `${R}/nexus-servicing/Website.jpg`,
+    hero: `${R}/nexus-servicing/Logo.jpg`,
+    featured: true,
+    blocks: [
+      {
+        full: true,
+        body: "Appliance repair, door to door, in a category where the whole business is being the phone that rings. The most competitive space I have worked in, and the thing that finally won it cost almost nothing.",
+      },
+      {
+        heading: "The entire funnel is ninety seconds",
+        level: 2,
+        body: "Nobody researches appliance repair for a fortnight. A machine breaks, someone searches, and they call one of the first credible options. There is no brand to build on and no consideration phase to nurture. So everything was pointed at being present and convincing inside the ninety seconds that decision actually takes.",
+      },
+      {
+        heading: "Live at six in the morning",
+        level: 2,
+        body: "Things break before work and at weekends. The campaigns went live at six, because the call that comes in at half past six goes to whoever was already awake, and the competitor still asleep does not get a second chance at that customer. Category this tight, the schedule is a strategy.",
+      },
+      {
+        heading: "Search built for how people describe a problem",
+        level: 2,
+        body: "An organic foundation and a paid programme covering every appliance and trade the business serviced, matched to how someone describes what broke rather than what a technician would call the repair. People type what happened, not what the fix is named.",
+      },
+      {
+        heading: "Speed as a conversion feature",
+        level: 2,
+        body: "The landing experiences were built to load fast on a phone on mobile data, because that is the actual condition someone is in when their washing machine has just emptied itself across the kitchen. A slow page here does not cost you a ranking so much as it costs you the call.",
+      },
+      {
+        heading: "The sticker that beat the ad platform",
+        level: 2,
+        body: "The best thing I built there was a QR sticker. Every technician carried them and left one on the appliance after the job. Months later, when something else in the house failed, that customer did not open a search engine and hand us straight back to the auction. They scanned the sticker and came directly to us. We turned a one-off repair into a channel we owned, in a category where every competitor was renting theirs by the click.",
+      },
+      {
+        heading: "The handoff, end to end",
+        level: 2,
+        body: "Calls landing with the sales team, dispatched to technicians, worked, and then the feedback coming back round to tell us which campaigns were producing jobs worth having rather than just jobs. A lead that becomes a cancelled visit is a cost, and the reporting had to be honest enough to say so.",
+      },
+      {
+        full: true,
+        body: "Positioned a local services business as the default call in its area, with a funnel that took someone from a broken appliance to a booked visit with nothing in between asking them to wait. The most competitive category I have worked in, and what won it was a sticker.",
+      },
+    ],
+    gallery: [
+      `${R}/nexus-servicing/Logo.jpg`,
+      `${R}/nexus-servicing/Website.jpg`,
+    ],
+  },
+  {
     slug: "geena-apparel",
     title: "Geena Apparel",
     thumb: `${R}/geena-apparel/packing_box.jpg`,
@@ -238,31 +309,21 @@ export const projects: Project[] = [
     blocks: [
       {
         full: true,
-        body: "Geena Apparel sells Indian wedding apparel online. A rich, specific niche, and one where the usual e-commerce playbook flattens exactly the thing people are buying.",
+        body: "Geena Apparel sells Indian wedding apparel. I did the brand. That is all I did here, and this page is not going to pretend otherwise.",
       },
       {
-        heading: "The niche was the strategy",
+        heading: "The identity",
         level: 2,
-        body: "Wedding apparel is not bought the way ordinary clothing is bought. It is emotional, occasion led, researched for weeks and tied to tradition. Treating it as generic fashion retail would have cost the brand the only advantage it had, so everything got built around the cultural specificity rather than in spite of it.",
+        body: "Wedding apparel is not bought the way ordinary clothing is bought. It is emotional, occasion led, researched for weeks and tied to tradition, and the usual e-commerce styling flattens exactly the thing people are paying for. So the identity was built around the cultural specificity rather than in spite of it.",
       },
       {
-        heading: "Content that respected the occasion",
+        heading: "The collateral",
         level: 2,
-        body: "Social programmes built around the traditions the clothing belongs to, showing the pieces in the context people imagine wearing them in. That is what earns a following in a niche this personal.",
-      },
-      {
-        heading: "The storefront as conversion surface",
-        level: 2,
-        body: "The shopping experience reworked so the apparel carried the page: better merchandising, a cleaner path from browsing to checkout, and product presentation that did justice to garments people were about to spend significantly on.",
-      },
-      {
-        heading: "Demand and lifecycle",
-        level: 2,
-        body: "Performance media to reach buyers actively looking, a search foundation tuned to how this customer actually phrases things, and lifecycle email keeping buyers close to new collections between the long gaps that a wedding purchase naturally leaves.",
+        body: "Logo, packaging, catalogue and the printed pieces that travel with an order. For a brand selling something people keep, the box it arrives in is doing as much work as anything on the website, and it is the part most brands treat as freight.",
       },
       {
         full: true,
-        body: "The brand was never only selling clothing. It was selling participation in something, and the growth work only started performing once it was built to say so.",
+        body: "No campaigns, no funnel, no pipeline, no numbers. A brand system, delivered, and nothing else. Every other project on this site is one I owned end to end, so it seemed worth saying plainly which one I did not.",
       },
     ],
     gallery: [
@@ -273,52 +334,6 @@ export const projects: Project[] = [
       `${R}/geena-apparel/packing_box.jpg`,
       `${R}/geena-apparel/Website.jpg`,
       `${R}/geena-apparel/Catalogue.png`,
-    ],
-  },
-  {
-    slug: "nexus-servicing",
-    title: "Nexus Servicing",
-    thumb: `${R}/nexus-servicing/Website.jpg`,
-    hero: `${R}/nexus-servicing/Logo.jpg`,
-    featured: true,
-    blocks: [
-      {
-        full: true,
-        body: "Nexus Servicing repairs appliances and handles plumbing and electrical work, door to door. The entire business depends on being the one that gets called when something breaks.",
-      },
-      {
-        heading: "Intent is everything here",
-        level: 2,
-        body: "Nobody researches appliance repair for a fortnight. A machine breaks, someone searches, and they call one of the first credible options. There is no brand loyalty to build on and no consideration phase to nurture. So the whole programme was pointed at being present and convincing in the ninety seconds that decision takes.",
-      },
-      {
-        heading: "Search, built for urgency",
-        level: 2,
-        body: "An organic foundation covering every appliance and trade the business services, matched to how people describe a problem rather than how a technician would. Someone types what broke, not what the repair is called.",
-      },
-      {
-        heading: "Paid coverage on the moments that convert",
-        level: 2,
-        body: "Performance media concentrated on the highest intent searches in the service area, because in this category the click that arrives during a problem is worth many times the one that arrives during a browse.",
-      },
-      {
-        heading: "Speed as a conversion feature",
-        level: 2,
-        body: "The landing experiences were built to load fast on a phone on mobile data, which is the actual condition someone is in when their washing machine has just flooded the kitchen. Slow pages do not lose you a ranking here so much as they lose you the call.",
-      },
-      {
-        heading: "Awareness underneath it",
-        level: 2,
-        body: "Social and display carried recognition in the service area so the name was already familiar by the time it appeared in a list of search results.",
-      },
-      {
-        full: true,
-        body: "Positioned a local services business to be the default call in its area, with a funnel that took someone from a broken appliance to a booked visit without a single step in between that asked them to wait.",
-      },
-    ],
-    gallery: [
-      `${R}/nexus-servicing/Logo.jpg`,
-      `${R}/nexus-servicing/Website.jpg`,
     ],
   },
 ];
