@@ -1,0 +1,280 @@
+/* ==================================================================
+   The acquisition stack built at Innobot Health.
+
+   Deliberately in the portfolio's own light palette. This is my work,
+   so it carries my design language; Innobot's dark brand stays inside
+   `.ib-frame` further down the page.
+================================================================== */
+
+.st-sec {
+  padding: clamp(48px, 8vh, 96px) var(--gutter);
+  border-top: 1px solid var(--border);
+}
+
+.st-inner {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
+
+.st-head {
+  max-width: 62ch;
+  margin-bottom: clamp(32px, 5vh, 56px);
+}
+
+.st-h {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 4.4vw, 58px);
+  font-weight: 700;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.08;
+  margin: 0 0 1.2rem;
+  color: var(--foreground);
+}
+
+.st-h em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}
+
+.st-p {
+  font-size: var(--text-body);
+  line-height: 1.85;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+.st-p + .st-p { margin-top: 1rem; }
+
+/* ── Before and after ────────────────────────────────────────── */
+
+.st-ba {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+@media (min-width: 760px) {
+  .st-ba { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.st-ba-col {
+  background: var(--background);
+  padding: clamp(24px, 3.4vw, 40px);
+}
+
+.st-ba-col.is-after { background: var(--card); }
+
+.st-ba-k {
+  display: block;
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.st-ba-col.is-after .st-ba-k { color: var(--accent); }
+
+.st-ba-t {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 2.4vw, 30px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.2;
+  color: var(--foreground);
+  margin: 0 0 0.9rem;
+}
+
+.st-ba-d {
+  font-size: var(--text-body);
+  line-height: 1.75;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+/* ── Stack layers ────────────────────────────────────────────── */
+
+.st-layers {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+.st-layer {
+  border-top: 1px solid var(--border);
+  padding: clamp(22px, 3vw, 34px) 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+  align-items: start;
+}
+
+@media (min-width: 860px) {
+  .st-layer {
+    grid-template-columns: 200px minmax(0, 1fr) minmax(0, 1.1fr);
+    gap: clamp(20px, 3vw, 48px);
+  }
+}
+
+.st-layers .st-layer:last-child { border-bottom: 1px solid var(--border); }
+
+.st-layer-n {
+  font-family: var(--font-display);
+  font-size: clamp(18px, 2vw, 24px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  color: var(--foreground);
+  margin: 0;
+}
+
+.st-layer-d {
+  font-size: var(--text-body);
+  line-height: 1.75;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+.st-tools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-content: flex-start;
+}
+
+.st-tool {
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  padding: 0.45rem 0.85rem;
+  white-space: nowrap;
+}
+
+.st-tool.is-replaced {
+  color: var(--muted);
+  text-decoration: line-through;
+  text-decoration-thickness: 1px;
+}
+
+.st-tool.is-current {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── Decisions ───────────────────────────────────────────────── */
+
+.st-calls {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+@media (min-width: 760px) {
+  .st-calls { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+.st-call {
+  background: var(--background);
+  padding: clamp(22px, 3vw, 34px);
+}
+
+.st-call-move {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.st-call-arrow {
+  color: var(--accent);
+  font-family: var(--font-display);
+  font-size: 14px;
+}
+
+.st-call-d {
+  font-size: var(--text-body);
+  line-height: 1.75;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+/* ── The funnel ──────────────────────────────────────────────── */
+
+.st-funnel {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+  margin-bottom: clamp(40px, 6vh, 72px);
+}
+
+@media (min-width: 680px) {
+  .st-funnel { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1040px) {
+  .st-funnel { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
+
+.st-step {
+  background: var(--background);
+  padding: clamp(18px, 2.4vw, 26px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.st-step-n {
+  font-family: var(--font-display);
+  font-size: var(--text-small);
+  letter-spacing: var(--tracking-wide);
+  color: var(--accent);
+}
+
+.st-step-t {
+  font-family: var(--font-display);
+  font-size: clamp(15px, 1.6vw, 18px);
+  font-weight: 600;
+  line-height: 1.25;
+  color: var(--foreground);
+  margin: 0;
+}
+
+.st-step-d {
+  font-size: 13.5px;
+  line-height: 1.65;
+  color: var(--muted-light);
+  margin: 0;
+}
+
+/* ── Closer ──────────────────────────────────────────────────── */
+
+.st-closer {
+  font-family: var(--font-display);
+  font-size: clamp(22px, 3vw, 40px);
+  font-weight: 600;
+  letter-spacing: var(--tracking-tight);
+  line-height: 1.25;
+  color: var(--foreground);
+  max-width: 24ch;
+  margin: 0;
+}
+
+.st-closer em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent);
+}

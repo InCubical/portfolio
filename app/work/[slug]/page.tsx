@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProjectHero from "@/components/project/ProjectHero";
+import InnobotStack from "@/components/project/InnobotStack";
 import InnobotSystem from "@/components/project/InnobotSystem";
 import InteractiveBentoGallery from "@/components/InteractiveBentoGallery";
 import PortfolioGrid from "@/components/PortfolioGrid";
@@ -164,7 +165,12 @@ export default async function WorkDetailPage({
       </section>
 
       {/* Bespoke showcase, for projects whose work is a system rather than a set of images */}
-      {project.showcase === "innobot" && <InnobotSystem />}
+      {project.showcase === "innobot" && (
+        <>
+          <InnobotStack />
+          <InnobotSystem />
+        </>
+      )}
 
       {/* Gallery */}
       {project.gallery && project.gallery.length > 0 && (

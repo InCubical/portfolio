@@ -71,11 +71,7 @@ export const projects: Project[] = [
       },
       {
         full: true,
-        body: "The part I am proudest of is below. The website runs on a design system I built before I built the site, which is the only reason one person can keep twenty eight routes coherent and ship a ninth service page in an afternoon.",
-      },
-      {
-        full: true,
-        body: "One person, whole funnel, first touch to booked meeting.",
+        body: "What follows is the whole of it. First the stack I inherited, chose, replaced and still operate, then the design system the brand surface runs on, because I built that before I built the site.",
       },
     ],
   },
