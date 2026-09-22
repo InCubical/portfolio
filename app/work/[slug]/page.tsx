@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import ProjectHero from "@/components/project/ProjectHero";
+import InnobotHero from "@/components/project/InnobotHero";
 import InnobotStack from "@/components/project/InnobotStack";
 import InnobotSystem from "@/components/project/InnobotSystem";
 import InteractiveBentoGallery from "@/components/InteractiveBentoGallery";
@@ -48,13 +49,17 @@ export default async function WorkDetailPage({
 
   return (
     <>
-      <ProjectHero
-        title={project.title}
-        image={project.hero}
-        background={project.heroBackground}
-        tone={project.heroTone}
-        showControls={Boolean(project.gallery?.length)}
-      />
+      {project.showcase === "innobot" ? (
+        <InnobotHero title={project.title} />
+      ) : (
+        <ProjectHero
+          title={project.title}
+          image={project.hero}
+          background={project.heroBackground}
+          tone={project.heroTone}
+          showControls={Boolean(project.gallery?.length)}
+        />
+      )}
 
       {/* Written breakdown */}
       <section className="section-container">

@@ -9,6 +9,107 @@
    `docs/DESIGN-SYSTEM.md` and `26-innobot-brand-for-motion.md`.
 ================================================================== */
 
+/* ── Hero: the mark, animated ────────────────────────────────── */
+/* The logo is painted through a CSS mask rather than dropped in as
+   artwork, which is the same technique the live site uses for client
+   logos: the file supplies the shape, the palette supplies the colour.
+   That also lets a teal sweep travel *through* the mark.
+
+   Motion obeys the system's own budget: one 0.7s ease-out entrance,
+   two ambient loops, nothing else moving. `backwards` not `both`, per
+   its rule about finished animations pinning a compositing layer. */
+
+.ibh {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(20px, 3vh, 34px);
+  min-height: 58vh;
+  overflow: hidden;
+  padding: clamp(48px, 9vh, 96px) var(--gutter);
+  background:
+    radial-gradient(60% 55% at 20% 15%, rgba(47, 211, 200, 0.18), transparent 70%),
+    radial-gradient(55% 50% at 85% 80%, rgba(47, 211, 200, 0.12), transparent 72%),
+    #050708;
+}
+
+@media (min-width: 768px) {
+  .ibh { min-height: 76vh; }
+}
+
+.ibh-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(40% 44% at 50% 48%, rgba(47, 211, 200, 0.22), transparent 70%);
+  animation: ibhBreathe 5.5s ease-in-out infinite;
+}
+
+.ibh-mark {
+  position: relative;
+  z-index: 1;
+  width: min(720px, 76vw);
+  aspect-ratio: 1400 / 518;
+  background: #f0fafa;
+  -webkit-mask-image: url("/images/projects/innobot-health/innobot-logo.png");
+  mask-image: url("/images/projects/innobot-health/innobot-logo.png");
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  animation: ibhRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) backwards;
+}
+
+/* Clipped by the parent's mask, so the sweep only shows inside the mark. */
+.ibh-mark::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: -60%;
+  width: 60%;
+  background: linear-gradient(100deg, transparent, rgba(47, 211, 200, 0.95), transparent);
+  animation: ibhSweep 6s cubic-bezier(0.4, 0, 0.2, 1) 1.1s infinite;
+}
+
+.ibh-eyebrow {
+  position: relative;
+  z-index: 1;
+  font-family: var(--ib-mono), ui-monospace, monospace;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6a8a8d;
+  text-align: center;
+  animation: ibhRise 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.15s backwards;
+}
+
+@keyframes ibhRise {
+  from { opacity: 0; transform: translateY(14px); }
+}
+
+@keyframes ibhBreathe {
+  0%, 100% { opacity: 0.7; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+
+@keyframes ibhSweep {
+  0% { transform: translateX(0); }
+  55%, 100% { transform: translateX(320%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ibh-mark,
+  .ibh-eyebrow { animation: none; }
+  .ibh-mark::after,
+  .ibh-glow { animation: none; }
+  .ibh-mark::after { opacity: 0; }
+}
+
 .ib-exhibit {
   padding: clamp(48px, 8vh, 96px) var(--gutter);
   border-top: 1px solid var(--border);
