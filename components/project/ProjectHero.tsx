@@ -6,6 +6,7 @@ export default function ProjectHero({
   image,
   background,
   tone = "light",
+  showControls = true,
 }: {
   title: string;
   image: string;
@@ -13,6 +14,8 @@ export default function ProjectHero({
   background?: string;
   /** `dark` flips the title to light type for dark-ground heroes. */
   tone?: "light" | "dark";
+  /** Decorative single-slide carousel chrome. Off for projects without a gallery. */
+  showControls?: boolean;
 }) {
   return (
     <section
@@ -40,17 +43,21 @@ export default function ProjectHero({
       </Container>
 
       {/* Decorative slider controls (single slide) */}
-      <div className="absolute left-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-white/80">
-        <i className="icon-angle-left" />
-      </div>
-      <div className="absolute right-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-white/80">
-        <i className="icon-angle-right" />
-      </div>
-      <div className="absolute bottom-6 right-6 z-10 flex items-center gap-1 text-sm font-semibold text-white/80">
-        <div>01</div>
-        <span>/</span>
-        <div>01</div>
-      </div>
+      {showControls && (
+        <>
+          <div className="absolute left-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-white/80">
+            <i className="icon-angle-left" />
+          </div>
+          <div className="absolute right-4 top-1/2 z-10 -translate-y-1/2 text-3xl text-white/80">
+            <i className="icon-angle-right" />
+          </div>
+          <div className="absolute bottom-6 right-6 z-10 flex items-center gap-1 text-sm font-semibold text-white/80">
+            <div>01</div>
+            <span>/</span>
+            <div>01</div>
+          </div>
+        </>
+      )}
     </section>
   );
 }

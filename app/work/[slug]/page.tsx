@@ -52,6 +52,7 @@ export default async function WorkDetailPage({
         image={project.hero}
         background={project.heroBackground}
         tone={project.heroTone}
+        showControls={Boolean(project.gallery?.length)}
       />
 
       {/* Written breakdown */}
